@@ -76,11 +76,16 @@ chmod 777 -R /path/to/gedikflix/data
 
 ## 📞 İletişim
 
-- Website: [www.gedikflix.com](http://www.gedikflix.com)
-- Email: info@gedikflix.com
-- Twitter: [@gedikflix](https://twitter.com/gedikflix)
-- Instagram: [@gedikflix](https://instagram.com/gedikflix)
+
 
 ---
 
-### GedikFlix - Sinemanın Keyfini Her Yerde Çıkarın! 
+<div align="center">
+  
+### GedikFlix - Sinemanın Keyfini Her Yerde Çıkarın!
+
+**Necati Yıldırım** ve **Şamil**'in eseridir.
+
+© 2023 GedikFlix. Tüm Hakları Saklıdır.
+
+</div> 

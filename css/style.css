@@ -304,6 +304,50 @@ footer {
     font-size: 0.9rem;
 }
 
+.footer-bottom .creators {
+    margin-top: 10px;
+    font-style: italic;
+    color: #f5c518;
+    text-align: center;
+}
+
+.footer-bottom .creators strong {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Footer Newsletter Form */
+.footer-newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.footer-newsletter-form input {
+    padding: 10px;
+    border: none;
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.footer-newsletter-form button {
+    padding: 10px;
+    background-color: #901a58;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-newsletter-form button:hover {
+    background-color: #7a1749;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
@@ -525,5 +569,394 @@ h2, .hero-content h2, .featured-movies h2, .register-container h2, .login-contai
 
 .hero-stats .stat-number {
     color: #FFA07A;
+}
+
+/* About Page Styles */
+.about-section {
+    padding: 80px 0;
+    background-color: #141414;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.about-text {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    color: #901a58;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.team-member {
+    flex: 1;
+    min-width: 250px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-photo {
+    height: 250px;
+    overflow: hidden;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-info {
+    padding: 20px;
+}
+
+.team-info h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.team-info p {
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.team-info .social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.team-info .social-links a {
+    color: #999;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.team-info .social-links a:hover {
+    color: #901a58;
+}
+
+.about-university {
+    flex: 1;
+    min-width: 300px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.about-university h2 {
+    color: #901a58;
+    margin-bottom: 20px;
+}
+
+.university-logo {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.university-logo img {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.about-university p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.university-link {
+    display: inline-block;
+    background-color: #901a58;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.university-link:hover {
+    background-color: #7a1749;
+}
+
+/* Contact Page Styles */
+.contact-section {
+    padding: 80px 0;
+    background-color: #141414;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h2 {
+    color: #901a58;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.contact-details {
+    margin-top: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.contact-item i {
+    color: #901a58;
+    font-size: 22px;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+.contact-item h3 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.social-contact {
+    margin-top: 40px;
+}
+
+.social-contact h3 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.social-contact .social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-contact .social-links a {
+    color: #999;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-contact .social-links a:hover {
+    color: #901a58;
+}
+
+.contact-form-container {
+    flex: 1;
+    min-width: 300px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.contact-form-container h2 {
+    color: #901a58;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group label {
+    display: block;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #242424;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.contact-form .form-group textarea {
+    resize: vertical;
+}
+
+.contact-form .submit-button {
+    background-color: #901a58;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form .submit-button:hover {
+    background-color: #7a1749;
+}
+
+.map-container {
+    margin-top: 60px;
+}
+
+.map-container h2 {
+    color: #901a58;
+    margin-bottom: 20px;
+}
+
+.map {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* FAQ Page Styles */
+.faq-section {
+    padding: 80px 0;
+    background-color: #141414;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq-intro {
+    margin: 30px 0;
+    line-height: 1.8;
+}
+
+.faq-intro a {
+    color: #901a58;
+    text-decoration: none;
+}
+
+.faq-intro a:hover {
+    text-decoration: underline;
+}
+
+.faq-list {
+    margin-top: 40px;
+}
+
+.faq-item {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #242424;
+}
+
+.faq-question h3 {
+    color: #fff;
+    font-weight: 500;
+}
+
+.faq-question i {
+    color: #901a58;
+    transition: transform 0.3s;
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s, padding 0.4s;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 20px 20px;
+    max-height: 500px;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer p {
+    line-height: 1.8;
+    color: #ccc;
+}
+
+/* Responsive Design for New Pages */
+@media (max-width: 768px) {
+    .about-content,
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .team-grid {
+        justify-content: center;
+    }
+    
+    .team-member {
+        min-width: 100%;
+    }
+    
+    .contact-form-container {
+        margin-top: 20px;
+    }
+    
+    .faq-question h3 {
+        font-size: 16px;
+    }
 } 
  
