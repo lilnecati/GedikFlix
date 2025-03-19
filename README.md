@@ -1,69 +1,58 @@
-# GedikFlix - Film İzleme Platformu
+# GedikFlix - Modern Film İzleme Platformu
 
-GedikFlix, modern ve kullanıcı dostu bir film izleme platformudur. PHP, MySQL ve HTML/CSS kullanılarak geliştirilmiştir.
+GedikFlix, PHP ve JSON tabanlı modern bir film izleme platformudur. Kullanıcı dostu arayüzü ve kapsamlı film arşiviyle, film tutkunları için mükemmel bir deneyim sunar.
 
-## Özellikler
+## ✨ Özellikler
 
-- Kullanıcı kaydı ve girişi
-- Film kategorileri
-- Film arama
-- Film detay sayfaları
-- Video oynatıcı
-- Responsive tasarım
-- Modern ve kullanıcı dostu arayüz
+- **Kullanıcı Yönetimi**: Kolay kayıt ve giriş sistemi
+- **Zengin Film Kataloğu**: Binlerce film ve diziye anında erişim
+- **Gelişmiş Kategori Sistemi**: Filmleri türlere göre keşfedin
+- **Akıllı Arama**: İstediğiniz içeriği hızlıca bulun
+- **Kişiselleştirilmiş Öneriler**: İzleme alışkanlıklarınıza göre öneriler
+- **Öne Çıkan Filmler**: Popüler ve yeni içerikleri keşfedin
+- **Mobil Uyumlu Tasarım**: Her cihazda mükemmel deneyim
+- **Üyelik Planları**: Farklı kullanıcı ihtiyaçlarına uygun seçenekler
 
-## Gereksinimler
+## 🔧 Teknik Altyapı
 
-- PHP 7.4 veya üzeri
-- MySQL 5.7 veya üzeri
-- Web sunucusu (Apache/Nginx)
-- mod_rewrite etkin (Apache için)
+- PHP 7.4+
+- JSON veri depolama
+- Modern JavaScript (ES6+)
+- Responsive CSS
+- Browser localStorage entegrasyonu
 
-## Kurulum
+## 📦 Kurulum
 
 1. Projeyi klonlayın:
 ```bash
 git clone https://github.com/kullaniciadi/gedikflix.git
 ```
 
-2. Veritabanını oluşturun:
-- MySQL'de yeni bir veritabanı oluşturun
-- `database.sql` dosyasını içe aktarın
-
-3. Veritabanı bağlantı ayarlarını yapın:
-- `config/database.php` dosyasını düzenleyin
-- Veritabanı bilgilerinizi girin:
-  ```php
-  $servername = "localhost";
-  $username = "kullanici_adi";
-  $password = "sifre";
-  $dbname = "gedikflix";
-  ```
-
-4. Dosya izinlerini ayarlayın:
+2. Dosya izinlerini ayarlayın:
 ```bash
 chmod 755 -R /path/to/gedikflix
-chmod 777 -R /path/to/gedikflix/uploads
+chmod 777 -R /path/to/gedikflix/data
 ```
 
-5. Web sunucunuzu yapılandırın:
+3. Web sunucunuzu yapılandırın:
 - Apache için `.htaccess` dosyasını etkinleştirin
 - Nginx için uygun yapılandırmayı ekleyin
 
-## Kullanım
+## 🚀 Kullanım
 
 1. Web tarayıcınızda `http://localhost/gedikflix` adresine gidin
-2. Yeni bir hesap oluşturun veya mevcut hesabınızla giriş yapın
-3. Filmleri keşfedin ve izlemeye başlayın
+2. Ana sayfadan popüler filmleri keşfedin
+3. Hesap oluşturun ve özel içeriklere erişin
+4. Kategorilere göz atın ve favorilerinizi kaydedin
 
-## Güvenlik
+## 🔒 Güvenlik Özellikleri
 
-- Tüm kullanıcı girişleri doğrulanır ve temizlenir
-- Şifreler güvenli bir şekilde hashlenir
-- SQL injection koruması
-- XSS koruması
+- Tüm kullanıcı verileri güvenli şekilde saklanır
+- Şifreler güçlü hashleme algoritmaları ile korunur
+- Oturum güvenliği için gelişmiş önlemler
+- XSS ve CSRF korumaları
 
-## Katkıda Bulunma
+## 👥 Katkıda Bulunma
 
 1. Bu depoyu fork edin
 2. Yeni bir branch oluşturun (`git checkout -b feature/yeniOzellik`)
@@ -71,13 +60,27 @@ chmod 777 -R /path/to/gedikflix/uploads
 4. Branch'inizi push edin (`git push origin feature/yeniOzellik`)
 5. Pull Request oluşturun
 
-## Lisans
+## 📋 Yapılacaklar Listesi
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakın.
+- [ ] Daha fazla film kategorisi eklenmesi
+- [ ] Kullanıcı yorumları sistemi
+- [ ] Film derecelendirme sistemi
+- [ ] Daha gelişmiş arama özellikleri
+- [ ] Çoklu dil desteği
 
-## İletişim
+## 📸 Ekran Görüntüleri
+
+![Ana Sayfa](screenshots/home.png)
+![Film Detay](screenshots/movie-detail.png)
+![Kategoriler](screenshots/categories.png)
+
+## 📞 İletişim
 
 - Website: [www.gedikflix.com](http://www.gedikflix.com)
 - Email: info@gedikflix.com
 - Twitter: [@gedikflix](https://twitter.com/gedikflix)
-- Facebook: [GedikFlix](https://facebook.com/gedikflix) 
+- Instagram: [@gedikflix](https://instagram.com/gedikflix)
+
+---
+
+### GedikFlix - Sinemanın Keyfini Her Yerde Çıkarın! 
