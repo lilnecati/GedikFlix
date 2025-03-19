@@ -454,6 +454,188 @@
                         "id": 4,
                         "name": "Dram"
                     }
+                },
+                {
+                    "id": 33,
+                    "title": "Gladyatör",
+                    "description": "Romalı General Maximus Decimus Meridius, İmparator Marcus Aurelius tarafından sevilmektedir. Ancak İmparator'un oğlu Commodus, babasının Maximus'u veliaht olarak seçme planını öğrendiğinde, babasını öldürür ve Maximus'u yakalayıp öldürülmesi için emir verir. Maximus kaçmayı başarır fakat ailesi katledilir. Yaralı ve bitkin düşen Maximus, köle tüccarları tarafından bulunur ve bir gladyatör olarak eğitilir. Yetenekleri sayesinde Roma'daki Kolezyum'a ulaşır ve intikamını almak için yol alır.",
+                    "year": 2000,
+                    "duration": 155,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
+                    "featured": false,
+                    "created_at": "2023-11-02 12:00:00",
+                    "category": {
+                        "id": 2,
+                        "name": "Aksiyon"
+                    }
+                },
+                {
+                    "id": 34,
+                    "title": "Parazit",
+                    "description": "Güney Kore'nin zengin-fakir ayrımını konu alan bu film, yarı bodrum katında yaşayan işsiz Kim ailesi üzerine odaklanır. Ailenin zeki oğlu Ki-woo'ya, varlıklı Park ailesinin kızına İngilizce dersi verme fırsatı doğar. Ki-woo, zekice bir plan yaparak tüm ailesini farklı kimliklerde bu zengin ailenin evinde çalışan kişiler haline getirir. Ancak beklenmedik olaylar, bu karmaşık ilişkiyi geri dönülemez bir noktaya taşır.",
+                    "year": 2019,
+                    "duration": 132,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+                    "featured": false,
+                    "created_at": "2023-11-03 12:00:00",
+                    "category": {
+                        "id": 6,
+                        "name": "Gerilim"
+                    }
+                },
+                {
+                    "id": 35,
+                    "title": "Sapık",
+                    "description": "Alfred Hitchcock'un bu psikolojik gerilim klasiği, patronundan çaldığı parayla kaçan Marion Crane'in, yolda konakladığı Bates Motel'de yaşadıklarını konu alır. Motelin sahibi Norman Bates, dışarıdan normal görünse de, annesiyle olan karmaşık ilişkisi ve psikolojik sorunları, olayların beklenmedik bir şekilde gelişmesine neden olur. Film, sinema tarihindeki en ikonik duş sahnesine sahiptir ve gerilim türünün temel taşlarından biri olarak kabul edilir.",
+                    "year": 1960,
+                    "duration": 109,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/4uH5oWDVFPmcBm40mJSvQPf9QRG.jpg",
+                    "featured": false,
+                    "created_at": "2023-11-04 12:00:00",
+                    "category": {
+                        "id": 6,
+                        "name": "Gerilim"
+                    }
+                },
+                {
+                    "id": 36,
+                    "title": "Aslan Kral",
+                    "description": "Disney'in bu animasyon klasiği, genç aslan Simba'nın babasının ölümünden sonra krallığından sürülmesi ve yıllar sonra hakkı olan tahtı geri almak için verdiği mücadeleyi anlatır. Hamlet'ten esinlenen hikâye, Afrika savanasında geçer ve Simba'nın kimliğini, sorumluluklarını ve kaderini keşfetmesini konu alır. Film, etkileyici animasyonu, unutulmaz müzikleri ve duygusal anlatımıyla tüm zamanların en sevilen animasyon filmlerinden biri olmuştur.",
+                    "year": 1994,
+                    "duration": 88,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg",
+                    "featured": false,
+                    "created_at": "2023-11-05 12:00:00",
+                    "category": {
+                        "id": 9,
+                        "name": "Animasyon"
+                    }
+                },
+                {
+                    "id": 37,
+                    "title": "Ateşböceklerinin Mezarı",
+                    "description": "II. Dünya Savaşı sırasında Japonya'da geçen bu içli animasyon filmi, bombardımanlardan sonra evsiz kalan 14 yaşındaki Seita ve 4 yaşındaki kız kardeşi Setsuko'nun hayatta kalma mücadelesini anlatır. Ailesini kaybeden kardeşler, uzak bir akrabalarının yanına sığınırlar, ancak burada da istenmediklerini hissederler ve kendi başlarına yaşamaya karar verirler. Film, savaşın masum sivillere ve özellikle çocuklara olan etkisini yürek burkan bir şekilde anlatır.",
+                    "year": 1988,
+                    "duration": 88,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/wcNkHDbyc290hcWk7KXbBZUuXpq.jpg",
+                    "featured": false,
+                    "created_at": "2023-11-06 12:00:00",
+                    "category": {
+                        "id": 9,
+                        "name": "Animasyon"
+                    }
+                },
+                {
+                    "id": 38,
+                    "title": "Köstebek",
+                    "description": "Martin Scorsese'nin bu gerilim filminde, genç polis Colin Sullivan (Matt Damon) ve gizli polis Billy Costigan (Leonardo DiCaprio), Boston'daki suç örgütleri ve polis arasındaki çatışmada çapraz roller üstlenirler. Sullivan, Costello adlı gangster için polis teşkilatında köstebek olarak çalışırken, Costigan ise Costello'nun çetesine sızmak için görevlendirilmiştir. İki taraflı oynayan bu iki adam, birbirlerinin kimliğini araştırırken, hem kendi hayatlarını hem de görevlerini tehlikeye atarlar.",
+                    "year": 2006,
+                    "duration": 151,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/8DrGnHbptVlU7BTKuKg3wJxDiML.jpg",
+                    "featured": false,
+                    "created_at": "2023-11-07 12:00:00",
+                    "category": {
+                        "id": 3,
+                        "name": "Suç"
+                    }
+                },
+                {
+                    "id": 39,
+                    "title": "Whiplash",
+                    "description": "Genç ve yetenekli davulcu Andrew Neiman, prestijli bir müzik konservatuarında eğitim görürken, okulun acımasız caz orkestra şefi Terence Fletcher ile karşılaşır. Fletcher, mükemmelliği zorlayan sert ve çoğu zaman zalim öğretim metotlarıyla ünlüdür. Andrew, caz müziğinin zirvesine ulaşma tutkusuyla Fletcher'ın orkestrasına kabul edilir, ancak bu kariyer yolculuğu, öğretmeninin baskısı altında fiziksel ve zihinsel sınırlarını zorlayacak bir mücadeleye dönüşür.",
+                    "year": 2014,
+                    "duration": 106,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/6uSPcdGNA2A6vJmCagXkvnutegs.jpg",
+                    "featured": false,
+                    "created_at": "2023-11-08 12:00:00",
+                    "category": {
+                        "id": 4,
+                        "name": "Dram"
+                    }
+                },
+                {
+                    "id": 40,
+                    "title": "Seppuku",
+                    "description": "17. yüzyıl Japonya'sında geçen bu tarihi drama, samurayların yaşam koşullarını ve onur kavramını sorgular. İşsiz bir samuray olan Hanshiro Tsugumo, bir soylu daimyo ailesinin evine giderek, onların bahçesinde seppuku (harakiri) ritüeli gerçekleştirmek için izin ister. Ancak bu talebin ardında, ailenin daha önce genç bir samuraya yaptığı haksızlığın intikamını alma isteği yatar. Film, samuray geleneğinin, onurun ve toplumsal sınıf ayrımının karanlık yönlerini etkileyici bir şekilde işler.",
+                    "year": 1962,
+                    "duration": 133,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/o62HpkIdvQK8KRa6oVV6pKscJsf.jpg",
+                    "featured": false,
+                    "created_at": "2023-11-09 12:00:00",
+                    "category": {
+                        "id": 4,
+                        "name": "Dram"
+                    }
+                },
+                {
+                    "id": 41,
+                    "title": "Geçmişin Gölgesinde",
+                    "description": "Neo-nazi geçmişini geride bırakmaya çalışan Derek Vinyard, hapisten çıktıktan sonra, kardeşi Danny'nin de aynı yola girdiğini görür. Derek, geçmişte işlediği suçların ve nefret düşüncelerinin nasıl zararlı olduğunu anlatmaya çalışırken, genç Danny de ırkçı düşüncelerin ve şiddetin tehlikeli çekiciliğine kapılmıştır. Film, ırkçılık, şiddet döngüsü ve kişisel değişim temaları üzerinden, bir ailenin ve toplumun parçalanmışlığını çarpıcı bir şekilde anlatır.",
+                    "year": 1998,
+                    "duration": 119,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/fXepRAYOx1qC3wju7XdDGx60775.jpg",
+                    "featured": false,
+                    "created_at": "2023-11-10 12:00:00",
+                    "category": {
+                        "id": 4,
+                        "name": "Dram"
+                    }
+                },
+                {
+                    "id": 42,
+                    "title": "Prestij",
+                    "description": "19. yüzyıl sonlarında Londra'da geçen filmde, iki genç ve hırslı sihirbaz, Alfred Borden ve Robert Angier, sahnede ve dışında rekabet ederler. Başlangıçta meslektaş olan ikili, trajik bir kaza sonrasında acımasız düşmanlara dönüşür. Birbirlerinin sırlarını çalmaya ve gösterilerini sabote etmeye çalışırken, bu rekabet giderek daha tehlikeli ve saplantılı bir hal alır. Film, sihirbazlık dünyasının karanlık yanlarını, saplantı, fedakarlık ve intikam temaları üzerinden anlatır.",
+                    "year": 2006,
+                    "duration": 130,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/6DRFdlNZpAaEt7eejsbAlJGgaM7.jpg",
+                    "featured": false,
+                    "created_at": "2023-11-11 12:00:00",
+                    "category": {
+                        "id": 6,
+                        "name": "Gerilim"
+                    }
+                },
+                {
+                    "id": 43,
+                    "title": "Sevginin Gücü",
+                    "description": "12 yaşındaki Mathilda, ailesinin bir uyuşturucu çetesi tarafından katledilmesinden sonra, aynı binada yaşayan kiralık katil Leon'a sığınır. Leon isteksizce Mathilda'yı yanına alır ve zamanla aralarında sıra dışı bir bağ oluşur. Mathilda, Leon'dan ailesinin intikamını almak için kiralık katil olmanın inceliklerini öğrenmek ister. Film, umulmadık bir dostluk, intikam ve hayatta kalma mücadelesi üzerine dokunaklı bir hikaye anlatır.",
+                    "year": 1994,
+                    "duration": 110,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/wHqGb8J0NrdszdqM9yBH4U7DvKD.jpg",
+                    "featured": false,
+                    "created_at": "2023-11-12 12:00:00",
+                    "category": {
+                        "id": 2,
+                        "name": "Aksiyon"
+                    }
+                },
+                {
+                    "id": 44,
+                    "title": "Örümcek-Adam: Örümcek Evrenine Geçiş",
+                    "description": "Miles Morales, Brooklyn'de yaşayan ve kendini bir Örümcek-Adam olarak kabul ettirmeye çalışan genç bir kahramandır. Ancak çoklu evren açıldığında, kendini diğer evrenlerden gelen farklı Örümcek-kahramanlarla bir araya gelmiş halde bulur. Örümcek Kadın Gwen Stacy ve diğerleriyle birlikte, tüm gerçeklikleri tehdit eden bir düşmana karşı savaşmalıdır. Bu animasyon filmi, çoklu evren konseptini benzersiz bir görsel stille işleyerek süper kahraman türüne yenilikçi bir bakış açısı getirir.",
+                    "year": 2023,
+                    "duration": 140,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/gVKYkAVbrik1Fu3EL6QBTZfnNAw.jpg",
+                    "featured": false,
+                    "created_at": "2023-11-13 12:00:00",
+                    "category": {
+                        "id": 9,
+                        "name": "Animasyon"
+                    }
+                },
+                {
+                    "id": 45,
+                    "title": "Kazablanka",
+                    "description": "II. Dünya Savaşı sırasında Fas'ın Kazablanka şehrinde geçen film, Rick's Café Américain adlı gece kulübünün sahibi acı dolu ve sinik Amerikalı Rick Blaine'in hikayesini anlatır. Rick'in hayatı, eski aşkı Ilsa Lund ve direnişçi kocası Victor Laszlo'nun Nazi işgalinden kaçmak için Kazablanka'ya gelmesiyle altüst olur. Ilsa, geçmişte Rick'i Paris'te terk etmiş, ancak hala ona karşı duygular beslemektedir. Film, aşk, fedakarlık ve savaş zamanında yapılan zor seçimler üzerine unutulmaz bir hikaye sunar.",
+                    "year": 1942,
+                    "duration": 102,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/5K7cOHoay2mZusSLezBOY0Qxh8a.jpg",
+                    "featured": false,
+                    "created_at": "2023-11-14 12:00:00",
+                    "category": {
+                        "id": 4,
+                        "name": "Dram"
+                    }
                 }
 
 

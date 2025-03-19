@@ -774,16 +774,21 @@ function getReviewCountByUserId($user_id) {
 }
 
 /**
- * Profil sayfasını güncellemek için gerekli profil verilerini getirir
- * 
- * @param int $user_id Kullanıcı ID
  * @return array Profil verileri
  */
 function getProfileData($user_id) {
     $user = getUserById($user_id);
     
     if (!$user) {
-        return null;
+        return [
+            'user' => null,
+            'stats' => [],
+            'notifications' => [],
+            'notification_settings' => [],
+            'earned_badges' => [],
+            'upcoming_badges' => [],
+            'favorite_movies' => []
+        ];
     }
     
     $stats = getUserStats($user_id);

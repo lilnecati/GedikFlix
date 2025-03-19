@@ -81,11 +81,36 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1925&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
     color: var(--text-color);
     overflow: hidden;
+    background-color: var(--dark-bg);
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    z-index: 0;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 1;
 }
 
 .hero-overlay {
@@ -94,16 +119,239 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to top, rgba(20, 20, 20, 1) 0%, rgba(20, 20, 20, 0.7) 50%, rgba(20, 20, 20, 0.4) 100%);
-    z-index: 1;
+    background: rgba(20, 20, 20, 0.3);
+    z-index: 2;
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 150px;
+    left: 80px;
+    z-index: 2;
+    max-width: 500px;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease 0.5s;
+}
+
+.hero-slide.active .slide-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.slide-year, .slide-duration, .slide-category {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.slide-description {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.slide-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.slide-button:hover {
+    background-color: #f52c36;
+    transform: scale(1.05);
+}
+
+.slider-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
-    max-width: 1200px;
-    padding: 0 20px;
+    z-index: 5;
+    max-width: 800px;
+    padding: 40px;
     text-align: center;
+    animation: fadeIn 1s ease forwards;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 160, 122, 0.3);
+}
+
+/* Film Poster Bloğu Düzeni */
+.hero-posters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.poster-row {
+    display: flex;
+    animation: posterSlide 60s linear infinite;
+    will-change: transform;
+    height: 50%; /* Ekranın yarısı kadar yükseklik */
+}
+
+.poster-row-reverse {
+    animation: posterSlideReverse 60s linear infinite;
+}
+
+@keyframes posterSlide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes posterSlideReverse {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.hero-poster {
+    flex: 0 0 auto;
+    width: 20%; /* 5 poster yan yana sığacak şekilde */
+    height: 100%; /* Satırın tamamını kapla */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 160, 122, 0.2);
+}
+
+.hero-poster:hover {
+    z-index: 3;
+    transform: scale(1.08);
+    box-shadow: 0 10px 30px rgba(255, 160, 122, 0.5);
+    border: 1px solid rgba(255, 160, 122, 0.7);
+}
+
+.hero-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    filter: brightness(1.1);
+}
+
+.hero-poster:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.poster-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.05) 60%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: all 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hero-poster:hover .poster-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%);
+}
+
+.poster-info {
+    color: white;
+    text-align: center;
+}
+
+.poster-info h3 {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.poster-meta {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero h1 {
@@ -197,14 +445,26 @@ main {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 3;
+    z-index: 5;
     animation: bounce 2s infinite;
 }
 
 .scroll-down a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
     color: white;
     font-size: 24px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-down a:hover {
+    background-color: #f52c36;
+    transform: scale(1.1);
 }
 
 @keyframes bounce {
@@ -222,11 +482,14 @@ main {
 /* Öne Çıkan Filmler */
 .featured-movies {
     padding: var(--section-padding);
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--lighter-bg) 100%);
 }
 
 .movie-slider {
     position: relative;
     padding: 0 40px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .slider-arrow {
@@ -234,59 +497,69 @@ main {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 16px;
+    background: rgba(255, 160, 122, 0.2);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 20px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slider-arrow.prev {
-    left: 10px;
+    left: 0;
 }
 
 .slider-arrow.next {
-    right: 10px;
+    right: 0;
 }
 
 .slider-arrow:hover {
-    background-color: var(--primary-color);
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
 }
 
 .movie-grid {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 20px 0;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .movie-grid::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
 }
 
 .movie-card {
     flex: 0 0 auto;
-    width: 240px;
-    border-radius: var(--card-radius);
+    width: 280px;
+    border-radius: 15px;
     overflow: hidden;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--light-bg);
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
 }
 
 .movie-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-color);
 }
 
 .movie-poster {
     position: relative;
-    height: 360px;
+    height: 400px;
     overflow: hidden;
 }
 
@@ -294,7 +567,11 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: var(--transition);
+    transition: transform 0.6s ease;
+}
+
+.movie-card:hover .movie-poster img {
+    transform: scale(1.1);
 }
 
 .movie-overlay {
@@ -303,64 +580,76 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 20px;
+    padding: 25px;
     opacity: 0;
-    transition: var(--transition);
+    transition: all 0.4s ease;
 }
 
 .movie-card:hover .movie-overlay {
     opacity: 1;
 }
 
-.movie-card:hover .movie-poster img {
-    transform: scale(1.05);
-}
-
 .movie-details {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    gap: 10px;
 }
 
 .movie-category, .movie-duration {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 12px;
+    background: rgba(255, 160, 122, 0.2);
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 160, 122, 0.3);
 }
 
 .watch-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    background-color: var(--primary-color);
+    gap: 10px;
+    background: var(--primary-color);
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 14px;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     text-decoration: none;
-    transition: var(--transition);
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.movie-card:hover .watch-button {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .watch-button:hover {
-    background-color: #f52c36;
+    background: #ff8c66;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 160, 122, 0.4);
 }
 
 .movie-info {
-    padding: 15px;
+    padding: 20px;
+    background: linear-gradient(to bottom, var(--light-bg), var(--lighter-bg));
 }
 
 .movie-info h3 {
-    font-size: 16px;
-    margin-bottom: 8px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--text-color);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -369,6 +658,7 @@ main {
 .movie-meta {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 14px;
     color: var(--text-gray);
 }
@@ -377,169 +667,106 @@ main {
     display: flex;
     align-items: center;
     gap: 5px;
+    background: rgba(255, 193, 7, 0.1);
+    padding: 5px 10px;
+    border-radius: 15px;
 }
 
 .rating i {
     color: #ffc107;
 }
 
-/* Trend Filmler Bölümü */
-.trending-section {
-    padding: var(--section-padding);
-    background-color: var(--lighter-bg);
-}
-
-.trending-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0 40px;
-}
-
-.trending-card {
-    display: flex;
-    background: var(--light-bg);
-    border-radius: var(--card-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s forwards;
-    animation-delay: var(--delay, 0s);
-}
-
-.trending-card:hover {
-    transform: translateX(10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
-}
-
-.trending-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    background: var(--gradient);
-    color: white;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.trending-poster {
-    width: 120px;
-    height: 180px;
-}
-
-.trending-poster img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.trending-info {
-    padding: 20px;
-    flex: 1;
-}
-
-.trending-info h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.trending-meta {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 10px;
-    color: var(--text-gray);
-    font-size: 14px;
-}
-
-.trending-desc {
-    color: var(--text-gray);
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-
-.watch-now-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: transparent;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.watch-now-btn:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Kategoriler Bölümü */
 .categories {
     padding: var(--section-padding);
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--lighter-bg) 100%);
 }
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
     padding: 0 40px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .category-card {
     display: flex;
     align-items: center;
-    background-color: var(--light-bg);
-    border-radius: var(--card-radius);
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
     text-decoration: none;
     color: var(--text-color);
-    transition: var(--transition);
-    box-shadow: var(--shadow);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--primary-color), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .category-card:hover {
-    background-color: var(--card-hover);
-    transform: translateY(-5px);
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-color);
+}
+
+.category-card:hover::before {
+    opacity: 0.1;
 }
 
 .category-icon {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), #FF8C66);
     color: white;
-    border-radius: 50%;
-    font-size: 24px;
-    margin-right: 20px;
+    border-radius: 15px;
+    font-size: 28px;
+    margin-right: 25px;
     flex-shrink: 0;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(255, 160, 122, 0.3);
+}
+
+.category-card:hover .category-icon {
+    transform: rotate(10deg) scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 160, 122, 0.4);
+}
+
+.category-content {
+    flex: 1;
 }
 
 .category-content h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: color 0.3s ease;
 }
 
 .category-content p {
     font-size: 14px;
     color: var(--text-gray);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    line-height: 1.5;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -547,78 +774,19 @@ main {
 }
 
 .movie-count {
-    font-size: 12px;
-    background-color: var(--lighter-bg);
-    padding: 4px 8px;
+    font-size: 13px;
+    background: rgba(255, 160, 122, 0.1);
+    color: var(--primary-color);
+    padding: 6px 12px;
     border-radius: 20px;
     display: inline-block;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
-/* Son Eklenen Filmler */
-.latest-movies {
-    padding: var(--section-padding);
-    background-color: var(--lighter-bg);
-}
-
-.latest-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 0 40px;
-}
-
-.latest-card {
-    background-color: var(--light-bg);
-    border-radius: var(--card-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.latest-card:hover {
-    transform: translateY(-10px);
-}
-
-.latest-poster {
-    position: relative;
-    height: 280px;
-}
-
-.latest-poster img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.latest-date {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.latest-info {
-    padding: 15px;
-    text-align: center;
-}
-
-.latest-info h3 {
-    font-size: 16px;
-    margin-bottom: 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.latest-info p {
-    color: var(--text-gray);
-    margin-bottom: 10px;
-    font-size: 14px;
+.category-card:hover .movie-count {
+    background: rgba(255, 160, 122, 0.2);
+    transform: translateY(-2px);
 }
 
 /* Üyelik Planları */
@@ -745,122 +913,6 @@ main {
 .plan-button:hover {
     background-color: var(--primary-color);
     color: white;
-}
-
-/* Popüler Oyuncular */
-.popular-actors {
-    padding: var(--section-padding);
-    background-color: var(--lighter-bg);
-}
-
-.actors-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 0 40px;
-}
-
-.actor-card {
-    background-color: var(--light-bg);
-    border-radius: var(--card-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.actor-card:hover {
-    transform: translateY(-10px);
-}
-
-.actor-image {
-    height: 300px;
-    overflow: hidden;
-}
-
-.actor-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.actor-card:hover .actor-image img {
-    transform: scale(1.05);
-}
-
-.actor-info {
-    padding: 15px;
-    text-align: center;
-}
-
-.actor-info h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-/* Kullanıcı Yorumları */
-.testimonials {
-    padding: var(--section-padding);
-}
-
-.testimonials-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 20px 40px;
-}
-
-.testimonial-card {
-    background-color: var(--light-bg);
-    border-radius: var(--card-radius);
-    padding: 30px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.testimonial-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
-}
-
-.testimonial-rating {
-    margin-bottom: 20px;
-}
-
-.testimonial-rating i {
-    color: #ccc;
-    font-size: 18px;
-    margin-right: 2px;
-}
-
-.testimonial-rating i.filled {
-    color: #ffc107;
-}
-
-.testimonial-content {
-    margin-bottom: 20px;
-}
-
-.testimonial-content p {
-    font-size: 16px;
-    line-height: 1.6;
-    font-style: italic;
-}
-
-.testimonial-author {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.author-name {
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.testimonial-date {
-    font-size: 14px;
-    color: var(--text-gray);
 }
 
 /* Mobil Uygulama Bölümü */
@@ -1027,6 +1079,10 @@ main {
         font-size: 48px;
     }
     
+    .hero-poster {
+        width: 25%; /* 4 poster yan yana */
+    }
+    
     .plans-container {
         flex-wrap: wrap;
         justify-content: center;
@@ -1062,69 +1118,79 @@ main {
 
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
     
     .hero p {
         font-size: 16px;
     }
     
-    .section-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+    .hero-content {
+        max-width: 90%;
+        padding: 25px;
     }
     
-    .view-all {
-        align-self: flex-end;
+    .poster-row, .poster-row-reverse {
+        animation-duration: 40s; /* Daha hızlı animasyon */
     }
     
-    .category-grid,
-    .latest-grid,
-    .actors-container,
-    .testimonials-container {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    .hero-poster {
+        width: 33.33%; /* 3 poster yan yana */
+        height: 100%; /* Satırın tamamını kapla */
     }
     
     .cta-buttons {
         flex-direction: column;
+        gap: 15px;
+    }
+    
+    .cta-button {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 16px;
     }
     
     .hero-stats {
         flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
     }
     
-    .trending-card {
-        flex-direction: column;
+    .stat-number {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-poster {
+        width: 50%; /* 2 poster yan yana */
+        height: 100%; /* Satırın tamamını kapla */
     }
     
-    .trending-number {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 0;
-        left: 0;
+    .poster-row, .poster-row-reverse {
+        animation-duration: 30s; /* Daha da hızlı animasyon */
     }
     
-    .trending-poster {
-        width: 100%;
-        height: 200px;
+    .hero-content {
+        padding: 20px;
     }
     
-    .app-buttons {
-        flex-direction: column;
+    .hero h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
     }
     
-    .newsletter-form {
-        flex-direction: column;
+    .hero p {
+        font-size: 14px;
+        margin-bottom: 20px;
     }
     
-    .newsletter-form input,
-    .newsletter-form button {
-        border-radius: 5px;
+    .stat-number {
+        font-size: 24px;
     }
     
-    .newsletter-form button {
-        margin-top: 10px;
+    .stat-text {
+        font-size: 14px;
     }
 } 

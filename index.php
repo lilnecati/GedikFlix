@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'config/database.php';
+// functions.php dosyasını dahil etmeye gerek yok, tüm fonksiyonlar database.php'de
 
 // Site istatistiklerini al
 $statistics = getSiteStatistics();
@@ -8,37 +9,11 @@ $movie_count = $statistics['movie_count'];
 $category_count = $statistics['category_count'];
 $user_count = $statistics['user_count'];
 
-$page_title = "Ana Sayfa";
+$page_title = "GedikFlix - Ana Sayfa";
 
 // Öne çıkan filmleri al
 $featured_movies = getFeaturedMovies();
 $categories = getAllCategories();
-
-// Rastgele 4 film seçelim (trend olanlar için)
-$all_movies = getAllMovies();
-shuffle($all_movies);
-$trending_movies = array_slice($all_movies, 0, 4);
-
-// En son eklenen 6 filmi alalım
-usort($all_movies, function($a, $b) {
-    return strtotime($b['created_at']) - strtotime($a['created_at']);
-});
-$latest_movies = array_slice($all_movies, 0, 6);
-
-// Yeni gelen popüler oyuncular
-$popular_actors = [
-    ['name' => 'Leonardo DiCaprio', 'image' => 'https://images.unsplash.com/photo-1580130379624-3a069adbffc2?q=80&w=1000&auto=format&fit=crop', 'movies' => '25'],
-    ['name' => 'Scarlett Johansson', 'image' => 'https://images.unsplash.com/photo-1580130379624-3a069adbffc2?q=80&w=1000&auto=format&fit=crop', 'movies' => '22'],
-    ['name' => 'Tom Hanks', 'image' => 'https://images.unsplash.com/photo-1580130379624-3a069adbffc2?q=80&w=1000&auto=format&fit=crop', 'movies' => '30'],
-    ['name' => 'Emma Stone', 'image' => 'https://images.unsplash.com/photo-1580130379624-3a069adbffc2?q=80&w=1000&auto=format&fit=crop', 'movies' => '18']
-];
-
-// Rastgele yorumlar
-$testimonials = [
-    ['name' => 'Ahmet Y.', 'rating' => 5, 'comment' => 'GedikFlix sayesinde tüm film merakımı karşılayabiliyorum. Premium üyeliğe geçiş yaparak reklamlardan da kurtuldum!', 'date' => '2 gün önce'],
-    ['name' => 'Ayşe K.', 'rating' => 4, 'comment' => 'Film kategorileri çok çeşitli, özellikle bilim kurgu seçkisi harika. Daha fazla animasyon filmi eklenebilir.', 'date' => '1 hafta önce'],
-    ['name' => 'Mehmet S.', 'rating' => 5, 'comment' => 'Kullanıcı dostu arayüz ve yüksek kaliteli içerik. Arkadaşlarıma tavsiye ediyorum.', 'date' => '3 gün önce']
-];
 
 include 'includes/header.php';
 ?>
@@ -49,37 +24,122 @@ include 'includes/header.php';
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-overlay"></div>
+        
         <div class="hero-content">
-            <div class="animation-container">
-                <h1 class="animate-title">GedikFlix'e <span class="highlight">Hoş Geldiniz</span></h1>
-                <p class="animate-subtitle">En iyi filmler, diziler ve daha fazlası...</p>
-                <div class="cta-buttons animate-buttons">
-                    <a href="movies.php" class="cta-button primary">Filmleri Keşfet</a>
-                    <?php if (!isset($_SESSION['user_id'])): ?>
-                        <a href="register.php" class="cta-button secondary">Üye Ol</a>
-                    <?php endif; ?>
+            <h1>GedikFlix'e <span class="highlight">Hoş Geldiniz</span></h1>
+            <p>En yeni ve popüler filmleri keşfedin. Sınırsız eğlence için hemen üye olun!</p>
+            <div class="cta-buttons">
+                <a href="register.php" class="cta-button primary">Ücretsiz Üye Ol</a>
+                <a href="#featured" class="cta-button secondary">Filmleri Keşfet</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number"><?php echo $movie_count; ?>+</span>
+                    <span class="stat-text">Film</span>
                 </div>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="<?php echo is_numeric($movie_count) ? $movie_count : 0; ?>"><?php echo is_numeric($movie_count) ? number_format($movie_count) : 0; ?></span>
-                        <span class="stat-text">Film</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="<?php echo is_numeric($category_count) ? $category_count : 0; ?>"><?php echo is_numeric($category_count) ? number_format($category_count) : 0; ?></span>
-                        <span class="stat-text">Kategori</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="<?php echo is_numeric($user_count) ? $user_count : 0; ?>"><?php echo is_numeric($user_count) ? number_format($user_count) : 0; ?></span>
-                        <span class="stat-text">Üye</span>
-                    </div>
+                <div class="stat-item">
+                    <span class="stat-number"><?php echo $category_count; ?>+</span>
+                    <span class="stat-text">Kategori</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number"><?php echo $user_count; ?>+</span>
+                    <span class="stat-text">Kullanıcı</span>
                 </div>
             </div>
         </div>
+
+        <div class="hero-posters">
+            <?php 
+            // database.json'dan filmleri al
+            $json_data = file_get_contents('data/database.json');
+            $data = json_decode($json_data, true);
+            $random_movies = $data['movies'];
+            
+            // Rastgele karıştırma
+            shuffle($random_movies);
+            
+            // Hero için film gösterimi
+            $poster_movies = array_slice($random_movies, 0, 20);
+            
+            // İkinci sıra için farklı filmler
+            shuffle($random_movies);
+            $poster_movies_2 = array_slice($random_movies, 0, 20);
+            ?>
+            <!-- Sola kayan üst sıra -->
+            <div class="poster-row">
+                <?php foreach ($poster_movies as $movie): ?>
+                <div class="hero-poster">
+                    <a href="movie.php?id=<?php echo $movie['id']; ?>">
+                        <img src="<?php echo $movie['poster_url']; ?>" alt="<?php echo $movie['title']; ?>">
+                        <div class="poster-overlay">
+                            <div class="poster-info">
+                                <h3><?php echo $movie['title']; ?></h3>
+                                <div class="poster-meta">
+                                    <span class="year"><?php echo $movie['year']; ?></span> 
+                                    <span class="duration"><?php echo $movie['duration']; ?> dk</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+                <?php foreach ($poster_movies as $movie): ?>
+                <div class="hero-poster">
+                    <a href="movie.php?id=<?php echo $movie['id']; ?>">
+                        <img src="<?php echo $movie['poster_url']; ?>" alt="<?php echo $movie['title']; ?>">
+                        <div class="poster-overlay">
+                            <div class="poster-info">
+                                <h3><?php echo $movie['title']; ?></h3>
+                                <div class="poster-meta">
+                                    <span class="year"><?php echo $movie['year']; ?></span> 
+                                    <span class="duration"><?php echo $movie['duration']; ?> dk</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+            
+            <!-- Sağa kayan alt sıra -->
+            <div class="poster-row poster-row-reverse">
+                <?php foreach ($poster_movies_2 as $movie): ?>
+                <div class="hero-poster">
+                    <a href="movie.php?id=<?php echo $movie['id']; ?>">
+                        <img src="<?php echo $movie['poster_url']; ?>" alt="<?php echo $movie['title']; ?>">
+                        <div class="poster-overlay">
+                            <div class="poster-info">
+                                <h3><?php echo $movie['title']; ?></h3>
+                                <div class="poster-meta">
+                                    <span class="year"><?php echo $movie['year']; ?></span> 
+                                    <span class="duration"><?php echo $movie['duration']; ?> dk</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+                <?php foreach ($poster_movies_2 as $movie): ?>
+                <div class="hero-poster">
+                    <a href="movie.php?id=<?php echo $movie['id']; ?>">
+                        <img src="<?php echo $movie['poster_url']; ?>" alt="<?php echo $movie['title']; ?>">
+                        <div class="poster-overlay">
+                            <div class="poster-info">
+                                <h3><?php echo $movie['title']; ?></h3>
+                                <div class="poster-meta">
+                                    <span class="year"><?php echo $movie['year']; ?></span> 
+                                    <span class="duration"><?php echo $movie['duration']; ?> dk</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        
         <div class="scroll-down">
-            <a href="#featured">
-                <i class="fas fa-chevron-down"></i>
-            </a>
+            <a href="#featured"><i class="fas fa-chevron-down"></i></a>
         </div>
     </section>
 
@@ -89,110 +149,90 @@ include 'includes/header.php';
             <h2><i class="fas fa-star"></i> Öne Çıkan Filmler</h2>
             <a href="movies.php" class="view-all">Tümünü Gör <i class="fas fa-arrow-right"></i></a>
         </div>
-        
         <div class="movie-slider">
             <button class="slider-arrow prev"><i class="fas fa-chevron-left"></i></button>
             <div class="movie-grid">
                 <?php foreach ($featured_movies as $movie): ?>
-                    <div class="movie-card">
-                        <div class="movie-poster">
-                            <img src="<?php echo $movie['poster_url']; ?>" alt="<?php echo $movie['title']; ?>">
-                            <div class="movie-overlay">
-                                <div class="movie-details">
-                                    <span class="movie-category"><?php echo $movie['category']['name']; ?></span>
-                                    <span class="movie-duration"><?php echo $movie['duration']; ?> dk</span>
-                                </div>
-                                <a href="movie.php?id=<?php echo $movie['id']; ?>" class="watch-button"><i class="fas fa-play"></i> İzle</a>
+                <div class="movie-card">
+                    <div class="movie-poster">
+                        <img src="<?php echo $movie['poster_url']; ?>" alt="<?php echo $movie['title']; ?>">
+                        <div class="movie-overlay">
+                            <div class="movie-details">
+                                <span class="movie-category">
+                                    <?php 
+                                    // Kategori bir dizi ise, dizi üzerinden name değerine erişelim
+                                    // Değilse doğrudan değeri kullanacağız
+                                    echo is_array($movie['category']) ? $movie['category']['name'] : $movie['category']; 
+                                    ?>
+                                </span>
+                                <span class="movie-duration"><?php echo $movie['duration']; ?> dk</span>
                             </div>
-                        </div>
-                        <div class="movie-info">
-                            <h3><?php echo $movie['title']; ?></h3>
-                            <div class="movie-meta">
-                                <span class="year"><?php echo $movie['year']; ?></span>
-                                <span class="rating"><i class="fas fa-star"></i> 8.5</span>
-                            </div>
+                            <a href="movie.php?id=<?php echo $movie['id']; ?>" class="watch-button">
+                                <i class="fas fa-play"></i> İzle
+                            </a>
                         </div>
                     </div>
+                    <div class="movie-info">
+                        <h3><?php echo $movie['title']; ?></h3>
+                        <div class="movie-meta">
+                            <span class="year"><?php echo $movie['year']; ?></span>
+                            <span class="rating">
+                                <i class="fas fa-star"></i>
+                                <?php 
+                                // Rating değerinin tanımlı olup olmadığını kontrol edelim
+                                echo isset($movie['rating']) ? number_format($movie['rating'], 1) : '8.5'; 
+                                ?>
+                            </span>
+                        </div>
+                    </div>
+                </div>
                 <?php endforeach; ?>
             </div>
             <button class="slider-arrow next"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
-    
-    <!-- Trend Filmler -->
-    <section class="trending-section">
-        <div class="section-header">
-            <h2><i class="fas fa-fire"></i> Trend Filmler</h2>
-            <a href="movies.php" class="view-all">Tümünü Gör <i class="fas fa-arrow-right"></i></a>
-        </div>
-        
-        <div class="trending-container">
-            <?php foreach ($trending_movies as $index => $movie): ?>
-                <div class="trending-card" style="--delay: <?php echo $index * 0.1; ?>s">
-                    <div class="trending-number"><?php echo $index + 1; ?></div>
-                    <div class="trending-poster">
-                        <img src="<?php echo $movie['poster_url']; ?>" alt="<?php echo $movie['title']; ?>">
-                    </div>
-                    <div class="trending-info">
-                        <h3><?php echo $movie['title']; ?></h3>
-                        <p class="trending-meta">
-                            <span class="trending-year"><?php echo $movie['year']; ?></span>
-                            <span class="trending-duration"><?php echo $movie['duration']; ?> dk</span>
-                        </p>
-                        <p class="trending-desc"><?php echo substr($movie['description'], 0, 100); ?>...</p>
-                        <a href="movie.php?id=<?php echo $movie['id']; ?>" class="watch-now-btn">
-                            <i class="fas fa-play-circle"></i> Hemen İzle
-                        </a>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    </section>
 
     <!-- Kategoriler -->
-    <section class="categories">
-        <div class="section-header">
-            <h2><i class="fas fa-list"></i> Kategoriler</h2>
-            <a href="categories.php" class="view-all">Tümünü Gör <i class="fas fa-arrow-right"></i></a>
-        </div>
-        
-        <div class="category-grid">
-            <?php foreach ($categories as $category): ?>
-                <a href="movies.php?category=<?php echo $category['id']; ?>" class="category-card">
+    <section id="categories" class="categories section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-list"></i> Kategoriler</h2>
+                <p class="section-subtitle">En sevdiğiniz türdeki filmleri keşfedin</p>
+            </div>
+            <div class="category-grid">
+                <?php foreach ($categories as $category): 
+                    // Her kategori için film sayısını hesapla - artık database.php'deki getCategoryMovieCount fonksiyonunu kullanabiliriz
+                    $category_movies_count = getCategoryMovieCount($category['id']);
+                ?>
+                <a href="category.php?id=<?php echo $category['id']; ?>" class="category-card">
                     <div class="category-icon">
-                        <i class="fas fa-film"></i>
+                        <?php
+                        // Kategori adına göre ikon belirleme
+                        $icon = 'film';
+                        switch($category['name']) {
+                            case 'Bilim Kurgu': $icon = 'rocket'; break;
+                            case 'Aksiyon': $icon = 'fire'; break;
+                            case 'Suç': $icon = 'video'; break;
+                            case 'Dram': $icon = 'video'; break;
+                            case 'Fantastik': $icon = 'video'; break;
+                            case 'Gerilim': $icon = 'video'; break;
+                            case 'Komedi': $icon = 'smile'; break;
+                            case 'Western': $icon = 'video'; break;
+                            default: $icon = 'video';
+                        }
+                        ?>
+                        <i class="fas fa-<?php echo $icon; ?>"></i>
                     </div>
                     <div class="category-content">
                         <h3><?php echo $category['name']; ?></h3>
-                        <p><?php echo $category['description']; ?></p>
-                        <span class="movie-count"><?php echo getMovieCountByCategory($category['id']); ?> Film</span>
+                        <span class="movie-count">
+                            <i class="fas fa-film"></i>
+                            <?php echo $category_movies_count; ?> Film
+                        </span>
                     </div>
                 </a>
-            <?php endforeach; ?>
-        </div>
-    </section>
-    
-    <!-- Son Eklenen Filmler -->
-    <section class="latest-movies">
-        <div class="section-header">
-            <h2><i class="fas fa-clock"></i> Son Eklenen Filmler</h2>
-            <a href="movies.php" class="view-all">Tümünü Gör <i class="fas fa-arrow-right"></i></a>
-        </div>
-        
-        <div class="latest-grid">
-            <?php foreach ($latest_movies as $movie): ?>
-                <div class="latest-card">
-                    <div class="latest-poster">
-                        <img src="<?php echo $movie['poster_url']; ?>" alt="<?php echo $movie['title']; ?>">
-                        <div class="latest-date">Yeni</div>
-                    </div>
-                    <div class="latest-info">
-                        <h3><?php echo $movie['title']; ?></h3>
-                        <p><?php echo $movie['year']; ?></p>
-                        <a href="movie.php?id=<?php echo $movie['id']; ?>" class="watch-button">İzle</a>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </div>
         </div>
     </section>
     
@@ -200,13 +240,13 @@ include 'includes/header.php';
     <section class="membership-plans">
         <div class="section-header center">
             <h2><i class="fas fa-crown"></i> Üyelik Planları</h2>
-            <p>Size en uygun planı seçin ve sınırsız film keyfine başlayın</p>
+            <p>Size en uygun planı seçin ve sınırsız eğlenceye başlayın</p>
         </div>
-        
         <div class="plans-container">
-            <div class="plan-card basic">
+            <!-- Basic Plan -->
+            <div class="plan-card">
                 <div class="plan-header">
-                    <h3>Temel</h3>
+                    <h3>Basic</h3>
                     <div class="plan-price">
                         <span class="currency">₺</span>
                         <span class="amount">29</span>
@@ -214,20 +254,31 @@ include 'includes/header.php';
                     </div>
                 </div>
                 <div class="plan-features">
-                    <div class="feature"><i class="fas fa-check"></i> HD içerik</div>
-                    <div class="feature"><i class="fas fa-check"></i> 1 cihazda izleme</div>
-                    <div class="feature"><i class="fas fa-check"></i> Film koleksiyonu</div>
-                    <div class="feature disabled"><i class="fas fa-times"></i> Reklamsız deneyim</div>
-                    <div class="feature disabled"><i class="fas fa-times"></i> 4K içerik</div>
-                    <div class="feature disabled"><i class="fas fa-times"></i> Çevrimdışı izleme</div>
+                    <div class="feature">
+                        <i class="fas fa-check"></i>
+                        <span>HD İçerik</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check"></i>
+                        <span>1 Cihazda İzleme</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-times"></i>
+                        <span>Reklamsız İzleme</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-times"></i>
+                        <span>Çevrimdışı İzleme</span>
+                    </div>
                 </div>
-                <a href="#" class="plan-button">Şimdi Başla</a>
+                <a href="register.php" class="plan-button">Hemen Başla</a>
             </div>
-            
-            <div class="plan-card standard recommended">
-                <div class="recommended-badge">Önerilen</div>
+
+            <!-- Standard Plan -->
+            <div class="plan-card recommended">
+                <div class="recommended-badge">En Popüler</div>
                 <div class="plan-header">
-                    <h3>Standart</h3>
+                    <h3>Standard</h3>
                     <div class="plan-price">
                         <span class="currency">₺</span>
                         <span class="amount">49</span>
@@ -235,17 +286,28 @@ include 'includes/header.php';
                     </div>
                 </div>
                 <div class="plan-features">
-                    <div class="feature"><i class="fas fa-check"></i> HD içerik</div>
-                    <div class="feature"><i class="fas fa-check"></i> 2 cihazda izleme</div>
-                    <div class="feature"><i class="fas fa-check"></i> Film koleksiyonu</div>
-                    <div class="feature"><i class="fas fa-check"></i> Reklamsız deneyim</div>
-                    <div class="feature disabled"><i class="fas fa-times"></i> 4K içerik</div>
-                    <div class="feature disabled"><i class="fas fa-times"></i> Çevrimdışı izleme</div>
+                    <div class="feature">
+                        <i class="fas fa-check"></i>
+                        <span>Full HD İçerik</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check"></i>
+                        <span>2 Cihazda İzleme</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check"></i>
+                        <span>Reklamsız İzleme</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-times"></i>
+                        <span>Çevrimdışı İzleme</span>
+                    </div>
                 </div>
-                <a href="#" class="plan-button">Şimdi Başla</a>
+                <a href="register.php" class="plan-button">Hemen Başla</a>
             </div>
-            
-            <div class="plan-card premium">
+
+            <!-- Premium Plan -->
+            <div class="plan-card">
                 <div class="plan-header">
                     <h3>Premium</h3>
                     <div class="plan-price">
@@ -255,64 +317,25 @@ include 'includes/header.php';
                     </div>
                 </div>
                 <div class="plan-features">
-                    <div class="feature"><i class="fas fa-check"></i> HD içerik</div>
-                    <div class="feature"><i class="fas fa-check"></i> 4 cihazda izleme</div>
-                    <div class="feature"><i class="fas fa-check"></i> Film koleksiyonu</div>
-                    <div class="feature"><i class="fas fa-check"></i> Reklamsız deneyim</div>
-                    <div class="feature"><i class="fas fa-check"></i> 4K içerik</div>
-                    <div class="feature"><i class="fas fa-check"></i> Çevrimdışı izleme</div>
+                    <div class="feature">
+                        <i class="fas fa-check"></i>
+                        <span>4K İçerik</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check"></i>
+                        <span>4 Cihazda İzleme</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check"></i>
+                        <span>Reklamsız İzleme</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check"></i>
+                        <span>Çevrimdışı İzleme</span>
+                    </div>
                 </div>
-                <a href="#" class="plan-button">Şimdi Başla</a>
+                <a href="register.php" class="plan-button">Hemen Başla</a>
             </div>
-        </div>
-    </section>
-    
-    <!-- Popüler Oyuncular -->
-    <section class="popular-actors">
-        <div class="section-header">
-            <h2><i class="fas fa-users"></i> Popüler Oyuncular</h2>
-            <a href="#" class="view-all">Tümünü Gör <i class="fas fa-arrow-right"></i></a>
-        </div>
-        
-        <div class="actors-container">
-            <?php foreach ($popular_actors as $actor): ?>
-                <div class="actor-card">
-                    <div class="actor-image">
-                        <img src="<?php echo $actor['image']; ?>" alt="<?php echo $actor['name']; ?>">
-                    </div>
-                    <div class="actor-info">
-                        <h3><?php echo $actor['name']; ?></h3>
-                        <p><span class="movie-count"><?php echo $actor['movies']; ?> Film</span></p>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    </section>
-    
-    <!-- Kullanıcı Yorumları -->
-    <section class="testimonials">
-        <div class="section-header center">
-            <h2><i class="fas fa-comment-alt"></i> Kullanıcı Yorumları</h2>
-            <p>Üyelerimizin GedikFlix hakkında düşünceleri</p>
-        </div>
-        
-        <div class="testimonials-container">
-            <?php foreach ($testimonials as $testimonial): ?>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <?php for ($i = 1; $i <= 5; $i++): ?>
-                            <i class="fas fa-star <?php echo $i <= $testimonial['rating'] ? 'filled' : ''; ?>"></i>
-                        <?php endfor; ?>
-                    </div>
-                    <div class="testimonial-content">
-                        <p>"<?php echo $testimonial['comment']; ?>"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-name"><?php echo $testimonial['name']; ?></div>
-                        <div class="testimonial-date"><?php echo $testimonial['date']; ?></div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
         </div>
     </section>
     
@@ -320,27 +343,27 @@ include 'includes/header.php';
     <section class="app-download">
         <div class="app-content">
             <div class="app-text">
-                <h2>GedikFlix Uygulaması ile Her Yerde Film Keyfi</h2>
-                <p>Mobil uygulamamızı indirin, çevrimdışı izleme özelliği ile internet olmadan da film keyfinize devam edin.</p>
+                <h2>Mobil Uygulamamızı İndirin</h2>
+                <p>GedikFlix'i her yerde izleyin. iOS ve Android cihazlarınız için özel uygulamamızı hemen indirin.</p>
                 <div class="app-buttons">
                     <a href="#" class="app-button">
                         <i class="fab fa-apple"></i>
                         <div class="app-button-text">
-                            <span class="app-button-small">İndir</span>
+                            <span class="app-button-small">Download on the</span>
                             <span class="app-button-big">App Store</span>
                         </div>
                     </a>
                     <a href="#" class="app-button">
                         <i class="fab fa-google-play"></i>
                         <div class="app-button-text">
-                            <span class="app-button-small">İndir</span>
+                            <span class="app-button-small">GET IT ON</span>
                             <span class="app-button-big">Google Play</span>
                         </div>
                     </a>
                 </div>
             </div>
             <div class="app-image">
-                <img src="images/app-mockup.png" alt="GedikFlix Mobil Uygulama">
+                <img src="images/app-preview.png" alt="GedikFlix Mobile App">
             </div>
         </div>
     </section>
@@ -349,15 +372,15 @@ include 'includes/header.php';
     <section class="newsletter">
         <div class="newsletter-container">
             <div class="newsletter-content">
-                <h2>Yeni Filmlerden Haberdar Olun</h2>
-                <p>Haftalık film önerileri ve yeni eklenen içeriklerden haberdar olmak için bültenimize abone olun.</p>
+                <h2>Bültenimize Abone Olun</h2>
+                <p>En yeni filmler ve özel içeriklerden ilk siz haberdar olun!</p>
                 <form class="newsletter-form">
                     <input type="email" placeholder="E-posta adresiniz" required>
                     <button type="submit">Abone Ol</button>
                 </form>
             </div>
             <div class="newsletter-decoration">
-                <i class="fas fa-envelope"></i>
+                <i class="fas fa-envelope-open-text"></i>
             </div>
         </div>
     </section>
@@ -366,52 +389,41 @@ include 'includes/header.php';
 <!-- Animasyon ve interaktif özellikler için JavaScript -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Hero bölümündeki animasyonlar
-    setTimeout(() => {
-        document.querySelector('.animate-title').classList.add('visible');
-        setTimeout(() => {
-            document.querySelector('.animate-subtitle').classList.add('visible');
-            setTimeout(() => {
-                document.querySelector('.animate-buttons').classList.add('visible');
-                setTimeout(() => {
-                    document.querySelector('.hero-stats').classList.add('visible');
-                    // Sayaç animasyonu
-                    startCounters();
-                }, 400);
-            }, 400);
-        }, 400);
-    }, 500);
+    // Hero bölümündeki animasyonları kaldırdık, çünkü ilgili sınıflar artık yok
+    // Doğrudan sayaç animasyonunu başlatıyoruz
+    startCounters();
     
     // İstatistik sayaçları
     function startCounters() {
         const counters = document.querySelectorAll('.stat-number');
         
         counters.forEach(counter => {
-            // data-count özelliğini güvenli bir şekilde alıp sayıya dönüştürüyoruz
-            const targetStr = counter.getAttribute('data-count') || '0';
-            const target = parseInt(targetStr) || 0; // Geçersiz değer varsa 0 kullanıyoruz
-            
-            if (target <= 0) {
-                counter.textContent = '0'; // Hedef 0 veya negatifse doğrudan 0 göster
-                return;
-            }
-            
-            const duration = 2000; // ms cinsinden
-            const step = target / (duration / 16); // 60fps için
-            
-            let current = 0;
-            const updateCounter = () => {
-                current += step;
-                if (current < target) {
-                    counter.textContent = Math.floor(current).toLocaleString();
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counter.textContent = target.toLocaleString();
+            // Doğrudan mevcut metin içeriğini kullanıyoruz
+            const textContent = counter.textContent;
+            // Sayısal bir değer varsa animasyon yapabiliriz
+            if (textContent.includes('+')) {
+                const baseValue = parseInt(textContent.replace(/\D/g, ''));
+                if (!isNaN(baseValue)) {
+                    // Sayı değerini animasyon ile göster
+                    animateValue(counter, 0, baseValue, 2000);
                 }
-            };
-            
-            updateCounter();
+            }
         });
+    }
+    
+    // Sayı animasyonu fonksiyonu
+    function animateValue(element, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const value = Math.floor(progress * (end - start) + start);
+            element.textContent = value + '+';
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
     }
     
     // Film Slider'ı için oklar
@@ -474,8 +486,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Animasyon uygulanacak elementler
     const animatedElements = document.querySelectorAll(
-        '.section-header, .movie-card, .trending-card, .category-card, .latest-card, ' +
-        '.plan-card, .actor-card, .testimonial-card, .app-content, .newsletter-container'
+        '.section-header, .movie-card, .category-card, .plan-card, ' +
+        '.app-content, .newsletter-container'
     );
     
     animatedElements.forEach(element => {
@@ -496,39 +508,42 @@ document.addEventListener('DOMContentLoaded', function() {
             display: none !important;
         }
         
-        /* Animasyon stillerini ekleyelim */
-        .animate-title, .animate-subtitle, .animate-buttons, .hero-stats {
+        /* Hero animasyonları */
+        .hero-content {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
         }
         
-        .animate-title.visible, .animate-subtitle.visible, .animate-buttons.visible, .hero-stats.visible {
-            opacity: 1;
-            transform: translateY(0);
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         /* Görünürlük animasyonları */
-        .section-header, .movie-card, .trending-card, .category-card, .latest-card,
-        .plan-card, .actor-card, .testimonial-card, .app-content, .newsletter-container {
+        .section-header, .movie-card, .category-card,
+        .plan-card, .app-content, .newsletter-container {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
         
-        .section-header.in-view, .movie-card.in-view, .trending-card.in-view, .category-card.in-view, .latest-card.in-view,
-        .plan-card.in-view, .actor-card.in-view, .testimonial-card.in-view, .app-content.in-view, .newsletter-container.in-view {
+        .section-header.in-view, .movie-card.in-view, .category-card.in-view,
+        .plan-card.in-view, .app-content.in-view, .newsletter-container.in-view {
             opacity: 1;
             transform: translateY(0);
-        }
-        
-        /* Gecikme animasyonları */
-        .trending-card {
-            transition-delay: var(--delay, 0s);
         }
     `;
     document.head.appendChild(style);
 });
 </script>
 
-<?php include 'includes/footer.php'; ?> 
+<?php include 'includes/footer.php'; ?>
+</body>
+</html> 
