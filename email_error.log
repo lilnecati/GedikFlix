@@ -1,0 +1,230 @@
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', 'test@email.com', 'testuser']
+INFO:root:E-posta: test@email.com, Kullanıcı adı: testuser
+INFO:root:E-posta gönderimi başlatılıyor: test@email.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'necati'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'necati'
+INFO:root:E-posta gönderimi başlatılıyor: 'fakeduran0@gmail.com'
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '226909'}
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+ERROR:root:E-posta gönderim hatası: {"'fakeduran0@gmail.com'": (553, b"5.1.3 The recipient address <'fakeduran0@gmail.com'> is not a valid RFC 5321\n5.1.3 address. For more information, go to\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\n5.1.3 specifications. a640c23a62f3a-ac314a47f0bsm875347866b.157 - gsmtp")}
+INFO:root:İşlem sonucu: {'success': False, 'error': 'E-posta gönderim hatası: {"\'fakeduran0@gmail.com\'": (553, b"5.1.3 The recipient address <\'fakeduran0@gmail.com\'> is not a valid RFC 5321\\n5.1.3 address. For more information, go to\\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\\n5.1.3 specifications. a640c23a62f3a-ac314a47f0bsm875347866b.157 - gsmtp")}'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'necati'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'necati'
+INFO:root:E-posta gönderimi başlatılıyor: 'fakeduran0@gmail.com'
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+ERROR:root:E-posta gönderim hatası: {"'fakeduran0@gmail.com'": (553, b"5.1.3 The recipient address <'fakeduran0@gmail.com'> is not a valid RFC 5321\n5.1.3 address. For more information, go to\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\n5.1.3 specifications. a640c23a62f3a-ac3147ec3bcsm896735766b.62 - gsmtp")}
+INFO:root:İşlem sonucu: {'success': False, 'error': 'E-posta gönderim hatası: {"\'fakeduran0@gmail.com\'": (553, b"5.1.3 The recipient address <\'fakeduran0@gmail.com\'> is not a valid RFC 5321\\n5.1.3 address. For more information, go to\\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\\n5.1.3 specifications. a640c23a62f3a-ac3147ec3bcsm896735766b.62 - gsmtp")}'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', 'fakeduran0@gmail.com', 'kullaniciadi']
+INFO:root:E-posta: fakeduran0@gmail.com, Kullanıcı adı: kullaniciadi
+INFO:root:E-posta gönderimi başlatılıyor: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '804826'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'necati'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'necati'
+INFO:root:E-posta gönderimi başlatılıyor: 'fakeduran0@gmail.com'
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+ERROR:root:E-posta gönderim hatası: {"'fakeduran0@gmail.com'": (553, b"5.1.3 The recipient address <'fakeduran0@gmail.com'> is not a valid RFC 5321\n5.1.3 address. For more information, go to\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\n5.1.3 specifications. 4fb4d7f45d1cf-5e816ad3909sm7984689a12.56 - gsmtp")}
+INFO:root:İşlem sonucu: {'success': False, 'error': 'E-posta gönderim hatası: {"\'fakeduran0@gmail.com\'": (553, b"5.1.3 The recipient address <\'fakeduran0@gmail.com\'> is not a valid RFC 5321\\n5.1.3 address. For more information, go to\\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\\n5.1.3 specifications. 4fb4d7f45d1cf-5e816ad3909sm7984689a12.56 - gsmtp")}'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'necati'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'necati'
+INFO:root:E-posta gönderimi başlatılıyor: 'fakeduran0@gmail.com'
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+ERROR:root:E-posta gönderim hatası: {"'fakeduran0@gmail.com'": (553, b"5.1.3 The recipient address <'fakeduran0@gmail.com'> is not a valid RFC 5321\n5.1.3 address. For more information, go to\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\n5.1.3 specifications. a640c23a62f3a-ac3149cf09dsm874262266b.121 - gsmtp")}
+INFO:root:İşlem sonucu: {'success': False, 'error': 'E-posta gönderim hatası: {"\'fakeduran0@gmail.com\'": (553, b"5.1.3 The recipient address <\'fakeduran0@gmail.com\'> is not a valid RFC 5321\\n5.1.3 address. For more information, go to\\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\\n5.1.3 specifications. a640c23a62f3a-ac3149cf09dsm874262266b.121 - gsmtp")}'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'necati'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'necati'
+INFO:root:E-posta gönderimi başlatılıyor: 'fakeduran0@gmail.com'
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+ERROR:root:E-posta gönderim hatası: {"'fakeduran0@gmail.com'": (553, b"5.1.3 The recipient address <'fakeduran0@gmail.com'> is not a valid RFC 5321\n5.1.3 address. For more information, go to\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\n5.1.3 specifications. a640c23a62f3a-ac3149cf219sm890670066b.88 - gsmtp")}
+INFO:root:İşlem sonucu: {'success': False, 'error': 'E-posta gönderim hatası: {"\'fakeduran0@gmail.com\'": (553, b"5.1.3 The recipient address <\'fakeduran0@gmail.com\'> is not a valid RFC 5321\\n5.1.3 address. For more information, go to\\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\\n5.1.3 specifications. a640c23a62f3a-ac3149cf219sm890670066b.88 - gsmtp")}'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'necati'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'necati'
+INFO:root:E-posta gönderimi başlatılıyor: 'fakeduran0@gmail.com'
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+ERROR:root:E-posta gönderim hatası: {"'fakeduran0@gmail.com'": (553, b"5.1.3 The recipient address <'fakeduran0@gmail.com'> is not a valid RFC 5321\n5.1.3 address. For more information, go to\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\n5.1.3 specifications. a640c23a62f3a-ac3149ce8efsm893174866b.102 - gsmtp")}
+INFO:root:İşlem sonucu: {'success': False, 'error': 'E-posta gönderim hatası: {"\'fakeduran0@gmail.com\'": (553, b"5.1.3 The recipient address <\'fakeduran0@gmail.com\'> is not a valid RFC 5321\\n5.1.3 address. For more information, go to\\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\\n5.1.3 specifications. a640c23a62f3a-ac3149ce8efsm893174866b.102 - gsmtp")}'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', 'fakeduran0@gmail.com', 'necati']
+INFO:root:E-posta: fakeduran0@gmail.com, Kullanıcı adı: necati
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '634686'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', 'fakeduran0@gmail.com', 'necati']
+INFO:root:E-posta: fakeduran0@gmail.com, Kullanıcı adı: necati
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '697541'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', 'fakeduran0@gmail.com', 'necati']
+INFO:root:E-posta: fakeduran0@gmail.com, Kullanıcı adı: necati
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '060248'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', 'fakeduran0@gmail.com', 'necati']
+INFO:root:E-posta: fakeduran0@gmail.com, Kullanıcı adı: necati
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '620247'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'necati'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'necati'
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '393955'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'necati'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'necati'
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '307843'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'necati'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'necati'
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '036656'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'Necati'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'Necati'
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '707920'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'a'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'a'
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '290849'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'a'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'a'
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '599724'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'a'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'a'
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '872787'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'a'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'a'
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '384753'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'a'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'a'
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '004500'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'a'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'a'
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '486961'}
+INFO:root:Script başlatıldı
+INFO:root:Argümanlar: ['py/register_verification.py', "'fakeduran0@gmail.com'", "'a'"]
+INFO:root:E-posta: 'fakeduran0@gmail.com', Kullanıcı adı: 'a'
+INFO:root:Temizlenmiş e-posta: fakeduran0@gmail.com
+INFO:root:SMTP sunucusuna bağlanılıyor...
+INFO:root:SMTP bağlantısı başlatıldı
+INFO:root:TLS başlatıldı
+INFO:root:SMTP login başarılı
+INFO:root:E-posta başarıyla gönderildi
+INFO:root:İşlem sonucu: {'success': True, 'code': '008168'}

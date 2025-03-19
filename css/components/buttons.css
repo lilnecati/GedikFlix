@@ -1,0 +1,219 @@
+/* Film Sayfası Butonları */
+:root {
+  --primary-color: #8A2BE2;  /* Ana renk (mor) */
+  --primary-light: #9B30FF;  /* Ana rengin açık tonu */
+  --primary-dark: #7126B5;   /* Ana rengin koyu tonu */
+  --accent-color: #FF5252;   /* Vurgu rengi (kırmızı) */
+  --accent-light: #FF6B6B;   /* Vurgu renginin açık tonu */
+  --accent-dark: #E53935;    /* Vurgu renginin koyu tonu */
+}
+
+/* Buton Temelleri */
+.movie-actions {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+/* İzle Butonu */
+.watch-movie-btn {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: translateY(0);
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+}
+
+.watch-movie-btn:hover {
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
+}
+
+.watch-movie-btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3);
+}
+
+.watch-movie-btn i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.watch-movie-btn:hover i {
+    transform: scale(1.2);
+}
+
+/* Favorilere Ekle Butonu */
+.add-to-favorites {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: translateY(0);
+    background: linear-gradient(135deg, #333, #4a4a4a);
+    color: white;
+}
+
+.add-to-favorites:hover {
+    background: linear-gradient(135deg, #444, #5a5a5a);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.add-to-favorites.active {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+    animation: glow 2s infinite alternate;
+}
+
+.add-to-favorites.active:hover {
+    background: linear-gradient(135deg, var(--accent-light), var(--accent-color));
+    box-shadow: 0 8px 20px rgba(255,82,82,0.4);
+}
+
+.add-to-favorites i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.add-to-favorites:hover i {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.add-to-favorites.active i {
+    color: #fff;
+    animation: heartbeat 1.5s infinite;
+}
+
+/* Button ripple effect */
+.watch-movie-btn::after, .add-to-favorites::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.watch-movie-btn:focus:not(:active)::after, 
+.add-to-favorites:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+.ripple-circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+/* Tooltip Containers */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-container .tooltip-text {
+    visibility: hidden;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.tooltip-container .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Animasyonlar */
+@keyframes glow {
+    from {
+        box-shadow: 0 5px 15px rgba(255,82,82,0.3);
+    }
+    to {
+        box-shadow: 0 5px 25px rgba(255,82,82,0.6);
+    }
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.3); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.3); }
+    60% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+} 

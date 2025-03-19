@@ -1,0 +1,43 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "admin",
+            "email": "admin@gedikflix.com",
+            "password": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi",
+            "profile_image": "default.png",
+            "created_at": "2023-10-01 10:00:00"
+        },
+        {
+            "id": 2,
+            "username": "demo",
+            "email": "demo@gedikflix.com",
+            "password": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi",
+            "profile_image": "default.png",
+            "created_at": "2023-10-02 11:30:00"
+        },
+        {
+            "id": 3,
+            "username": "test",
+            "email": "test@gmail.com",
+            "password": "$2y$12$sNCBwUOQTxuup4\/y4X0Xaec.1\/CunBtjGKERBaKPNoM2uRZSBrbSe",
+            "created_at": "2025-03-18 07:18:48"
+        },
+        {
+            "id": 4,
+            "username": "deneme",
+            "email": "admin@necatiyildirim.com",
+            "password": "$2y$12$rIOQgg3QJHVH0.3KYFDMcuUGS5PN4nuksOZmAS3IXVYDGW4Qnz5XC",
+            "created_at": "2025-03-18 07:19:48",
+            "profile_image": "4_1742282689.jpg"
+        },
+        {
+            "id": 5,
+            "username": "a",
+            "email": "fakeduran0@gmail.com",
+            "password": "$2y$12$r3kOpsvM5OYkrTOFom3PeuOJ.MwS8fYfBhumyp5KpC0leYMqKsoAC",
+            "profile_image": "y\u00fczba\u015f\u0131.png",
+            "created_at": "2025-03-18 20:02:50"
+        }
+    ]
+}

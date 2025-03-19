@@ -1,0 +1,858 @@
+{
+    "badges": [
+        {
+            "id": 1,
+            "name": "\u0130lk Ad\u0131m",
+            "icon": "fa-play-circle",
+            "color": "#3498db",
+            "description": "\u0130lk filminizi izlediniz",
+            "category": "watching",
+            "requirement": {
+                "type": "movie_count",
+                "value": 1
+            }
+        },
+        {
+            "id": 2,
+            "name": "Film Merakl\u0131s\u0131",
+            "icon": "fa-film",
+            "color": "#3498db",
+            "description": "10 film izlediniz",
+            "category": "watching",
+            "requirement": {
+                "type": "movie_count",
+                "value": 10
+            }
+        },
+        {
+            "id": 3,
+            "name": "Film Tutkunu",
+            "icon": "fa-film",
+            "color": "#2980b9",
+            "description": "50 film izlediniz",
+            "category": "watching",
+            "requirement": {
+                "type": "movie_count",
+                "value": 50
+            }
+        },
+        {
+            "id": 4,
+            "name": "Film Uzman\u0131",
+            "icon": "fa-film",
+            "color": "#1b557a",
+            "description": "100 film izlediniz",
+            "category": "watching",
+            "requirement": {
+                "type": "movie_count",
+                "value": 100
+            }
+        },
+        {
+            "id": 5,
+            "name": "Sinema Dehas\u0131",
+            "icon": "fa-film",
+            "color": "#0e385c",
+            "description": "500 film izlediniz",
+            "category": "watching",
+            "requirement": {
+                "type": "movie_count",
+                "value": 500
+            }
+        },
+        {
+            "id": 6,
+            "name": "G\u00fcnl\u00fck Doz",
+            "icon": "fa-calendar-check",
+            "color": "#e74c3c",
+            "description": "3 g\u00fcn \u00fcst \u00fcste film izlediniz",
+            "category": "streak",
+            "requirement": {
+                "type": "watch_streak",
+                "value": 3
+            }
+        },
+        {
+            "id": 7,
+            "name": "Sad\u0131k \u0130zleyici",
+            "icon": "fa-calendar-check",
+            "color": "#c0392b",
+            "description": "7 g\u00fcn \u00fcst \u00fcste film izlediniz",
+            "category": "streak",
+            "requirement": {
+                "type": "watch_streak",
+                "value": 7
+            }
+        },
+        {
+            "id": 8,
+            "name": "Durmak Yok",
+            "icon": "fa-calendar-check",
+            "color": "#962d22",
+            "description": "14 g\u00fcn \u00fcst \u00fcste film izlediniz",
+            "category": "streak",
+            "requirement": {
+                "type": "watch_streak",
+                "value": 14
+            }
+        },
+        {
+            "id": 9,
+            "name": "Ba\u011f\u0131ml\u0131 \u0130zleyici",
+            "icon": "fa-calendar-check",
+            "color": "#6d2018",
+            "description": "30 g\u00fcn \u00fcst \u00fcste film izlediniz",
+            "category": "streak",
+            "requirement": {
+                "type": "watch_streak",
+                "value": 30
+            }
+        },
+        {
+            "id": 10,
+            "name": "\u00c7ifte \u0130zleyici",
+            "icon": "fa-clock",
+            "color": "#9b59b6",
+            "description": "Ayn\u0131 g\u00fcn i\u00e7inde 2 film izlediniz",
+            "category": "watching",
+            "requirement": {
+                "type": "same_day_watch",
+                "value": 2
+            }
+        },
+        {
+            "id": 11,
+            "name": "Maraton Ko\u015fucusu",
+            "icon": "fa-clock",
+            "color": "#8e44ad",
+            "description": "Ayn\u0131 g\u00fcn i\u00e7inde 3 film izlediniz",
+            "category": "watching",
+            "requirement": {
+                "type": "same_day_watch",
+                "value": 3
+            }
+        },
+        {
+            "id": 12,
+            "name": "Sinema Maratonu",
+            "icon": "fa-clock",
+            "color": "#6c3483",
+            "description": "Ayn\u0131 g\u00fcn i\u00e7inde 5 film izlediniz",
+            "category": "watching",
+            "requirement": {
+                "type": "same_day_watch",
+                "value": 5
+            }
+        },
+        {
+            "id": 13,
+            "name": "Binge-Watch Ustas\u0131",
+            "icon": "fa-clock",
+            "color": "#4a235a",
+            "description": "Ayn\u0131 g\u00fcn i\u00e7inde 10 film izlediniz",
+            "category": "watching",
+            "requirement": {
+                "type": "same_day_watch",
+                "value": 10
+            }
+        },
+        {
+            "id": 14,
+            "name": "Gece Ku\u015fu",
+            "icon": "fa-moon",
+            "color": "#34495e",
+            "description": "Gece saatlerinde (00:00-04:00) bir film izlediniz",
+            "category": "watching",
+            "requirement": {
+                "type": "night_watch",
+                "value": 1
+            }
+        },
+        {
+            "id": 15,
+            "name": "Uyku D\u00fc\u015fman\u0131",
+            "icon": "fa-moon",
+            "color": "#2c3e50",
+            "description": "Gece saatlerinde (00:00-04:00) 5 film izlediniz",
+            "category": "watching",
+            "requirement": {
+                "type": "night_watch",
+                "value": 5
+            }
+        },
+        {
+            "id": 16,
+            "name": "Gece Bek\u00e7isi",
+            "icon": "fa-moon",
+            "color": "#1c2833",
+            "description": "Gece saatlerinde (00:00-04:00) 20 film izlediniz",
+            "category": "watching",
+            "requirement": {
+                "type": "night_watch",
+                "value": 20
+            }
+        },
+        {
+            "id": 17,
+            "name": "\u0130lk Favori",
+            "icon": "fa-heart",
+            "color": "#e74c3c",
+            "description": "\u0130lk favorinizi eklediniz",
+            "category": "favorites",
+            "requirement": {
+                "type": "first_favorite",
+                "value": 1
+            }
+        },
+        {
+            "id": 18,
+            "name": "Koleksiyoner",
+            "icon": "fa-heart",
+            "color": "#e74c3c",
+            "description": "10 filmi favorilerinize eklediniz",
+            "category": "favorites",
+            "requirement": {
+                "type": "favorite_count",
+                "value": 10
+            }
+        },
+        {
+            "id": 19,
+            "name": "Film A\u015f\u0131\u011f\u0131",
+            "icon": "fa-heart",
+            "color": "#c0392b",
+            "description": "50 filmi favorilerinize eklediniz",
+            "category": "favorites",
+            "requirement": {
+                "type": "favorite_count",
+                "value": 50
+            }
+        },
+        {
+            "id": 20,
+            "name": "Hazine Avc\u0131s\u0131",
+            "icon": "fa-heart",
+            "color": "#962d22",
+            "description": "100 filmi favorilerinize eklediniz",
+            "category": "favorites",
+            "requirement": {
+                "type": "favorite_count",
+                "value": 100
+            }
+        },
+        {
+            "id": 21,
+            "name": "\u0130lk Ele\u015ftiri",
+            "icon": "fa-comment",
+            "color": "#2ecc71",
+            "description": "\u0130lk yorumunuzu yapt\u0131n\u0131z",
+            "category": "reviews",
+            "requirement": {
+                "type": "first_review",
+                "value": 1
+            }
+        },
+        {
+            "id": 22,
+            "name": "Ele\u015ftirmen",
+            "icon": "fa-comment",
+            "color": "#2ecc71",
+            "description": "10 filme yorum yapt\u0131n\u0131z",
+            "category": "reviews",
+            "requirement": {
+                "type": "review_count",
+                "value": 10
+            }
+        },
+        {
+            "id": 23,
+            "name": "Film Yorumcusu",
+            "icon": "fa-comment",
+            "color": "#27ae60",
+            "description": "50 filme yorum yapt\u0131n\u0131z",
+            "category": "reviews",
+            "requirement": {
+                "type": "review_count",
+                "value": 50
+            }
+        },
+        {
+            "id": 24,
+            "name": "Profesyonel Ele\u015ftirmen",
+            "icon": "fa-comment",
+            "color": "#1e8449",
+            "description": "100 filme yorum yapt\u0131n\u0131z",
+            "category": "reviews",
+            "requirement": {
+                "type": "review_count",
+                "value": 100
+            }
+        },
+        {
+            "id": 25,
+            "name": "\u0130lk Be\u011feni",
+            "icon": "fa-star",
+            "color": "#f1c40f",
+            "description": "\u0130lk kez 5 y\u0131ld\u0131z verdiniz",
+            "category": "reviews",
+            "requirement": {
+                "type": "high_rating",
+                "value": 1,
+                "rating": 5
+            }
+        },
+        {
+            "id": 26,
+            "name": "Olumlu Ele\u015ftirmen",
+            "icon": "fa-star",
+            "color": "#f1c40f",
+            "description": "10 filme 5 y\u0131ld\u0131z verdiniz",
+            "category": "reviews",
+            "requirement": {
+                "type": "high_rating",
+                "value": 10,
+                "rating": 5
+            }
+        },
+        {
+            "id": 27,
+            "name": "Pozitif \u0130zleyici",
+            "icon": "fa-star",
+            "color": "#d4ac0d",
+            "description": "25 filme 5 y\u0131ld\u0131z verdiniz",
+            "category": "reviews",
+            "requirement": {
+                "type": "high_rating",
+                "value": 25,
+                "rating": 5
+            }
+        },
+        {
+            "id": 28,
+            "name": "Aksiyon Hayran\u0131",
+            "icon": "fa-fire",
+            "color": "#e67e22",
+            "description": "10 aksiyon filmi izlediniz",
+            "category": "genres",
+            "requirement": {
+                "type": "genre_count",
+                "value": 10,
+                "genre": "action"
+            }
+        },
+        {
+            "id": 29,
+            "name": "Komedi Ustas\u0131",
+            "icon": "fa-laugh",
+            "color": "#f39c12",
+            "description": "10 komedi filmi izlediniz",
+            "category": "genres",
+            "requirement": {
+                "type": "genre_count",
+                "value": 10,
+                "genre": "comedy"
+            }
+        },
+        {
+            "id": 30,
+            "name": "Dram Dostu",
+            "icon": "fa-theater-masks",
+            "color": "#9b59b6",
+            "description": "10 dram filmi izlediniz",
+            "category": "genres",
+            "requirement": {
+                "type": "genre_count",
+                "value": 10,
+                "genre": "drama"
+            }
+        },
+        {
+            "id": 31,
+            "name": "Bilim Kurgu Delisi",
+            "icon": "fa-rocket",
+            "color": "#3498db",
+            "description": "10 bilim kurgu filmi izlediniz",
+            "category": "genres",
+            "requirement": {
+                "type": "genre_count",
+                "value": 10,
+                "genre": "sci-fi"
+            }
+        },
+        {
+            "id": 32,
+            "name": "Korku Hayran\u0131",
+            "icon": "fa-ghost",
+            "color": "#34495e",
+            "description": "10 korku filmi izlediniz",
+            "category": "genres",
+            "requirement": {
+                "type": "genre_count",
+                "value": 10,
+                "genre": "horror"
+            }
+        },
+        {
+            "id": 33,
+            "name": "Romantik \u0130zleyici",
+            "icon": "fa-heart",
+            "color": "#e74c3c",
+            "description": "10 romantik film izlediniz",
+            "category": "genres",
+            "requirement": {
+                "type": "genre_count",
+                "value": 10,
+                "genre": "romance"
+            }
+        },
+        {
+            "id": 34,
+            "name": "Macera Avc\u0131s\u0131",
+            "icon": "fa-compass",
+            "color": "#2ecc71",
+            "description": "10 macera filmi izlediniz",
+            "category": "genres",
+            "requirement": {
+                "type": "genre_count",
+                "value": 10,
+                "genre": "adventure"
+            }
+        },
+        {
+            "id": 35,
+            "name": "Belgesel \u0130zleyicisi",
+            "icon": "fa-book",
+            "color": "#3498db",
+            "description": "10 belgesel izlediniz",
+            "category": "genres",
+            "requirement": {
+                "type": "genre_count",
+                "value": 10,
+                "genre": "documentary"
+            }
+        },
+        {
+            "id": 36,
+            "name": "Sinema Acemi",
+            "icon": "fa-hourglass-start",
+            "color": "#1abc9c",
+            "description": "Toplam 10 saat film izlediniz",
+            "category": "duration",
+            "requirement": {
+                "type": "watch_duration",
+                "value": 10
+            }
+        },
+        {
+            "id": 37,
+            "name": "Sinema \u0130lgilisi",
+            "icon": "fa-hourglass-half",
+            "color": "#16a085",
+            "description": "Toplam 24 saat film izlediniz",
+            "category": "duration",
+            "requirement": {
+                "type": "watch_duration",
+                "value": 24
+            }
+        },
+        {
+            "id": 38,
+            "name": "Tam G\u00fcnl\u00fck Maraton",
+            "icon": "fa-hourglass-end",
+            "color": "#117a65",
+            "description": "Toplam 48 saat film izlediniz",
+            "category": "duration",
+            "requirement": {
+                "type": "watch_duration",
+                "value": 48
+            }
+        },
+        {
+            "id": 39,
+            "name": "Haftal\u0131k \u0130zleyici",
+            "icon": "fa-clock",
+            "color": "#0e6655",
+            "description": "Toplam 168 saat film izlediniz",
+            "category": "duration",
+            "requirement": {
+                "type": "watch_duration",
+                "value": 168
+            }
+        },
+        {
+            "id": 40,
+            "name": "Ayl\u0131k \u0130zleyici",
+            "icon": "fa-clock",
+            "color": "#0b5345",
+            "description": "Toplam 720 saat film izlediniz",
+            "category": "duration",
+            "requirement": {
+                "type": "watch_duration",
+                "value": 720
+            }
+        },
+        {
+            "id": 41,
+            "name": "Ho\u015f Geldiniz",
+            "icon": "fa-sign-in-alt",
+            "color": "#3498db",
+            "description": "GedikFlix'e ilk kez giri\u015f yapt\u0131n\u0131z",
+            "category": "membership",
+            "requirement": {
+                "type": "login_count",
+                "value": 1
+            }
+        },
+        {
+            "id": 42,
+            "name": "D\u00fczenli \u0130zleyici",
+            "icon": "fa-calendar-check",
+            "color": "#2980b9",
+            "description": "7 g\u00fcn \u00fcst \u00fcste giri\u015f yapt\u0131n\u0131z",
+            "category": "membership",
+            "requirement": {
+                "type": "login_streak",
+                "value": 7
+            }
+        },
+        {
+            "id": 43,
+            "name": "Sad\u0131k \u00dcye",
+            "icon": "fa-calendar-check",
+            "color": "#1a5276",
+            "description": "14 g\u00fcn \u00fcst \u00fcste giri\u015f yapt\u0131n\u0131z",
+            "category": "membership",
+            "requirement": {
+                "type": "login_streak",
+                "value": 14
+            }
+        },
+        {
+            "id": 44,
+            "name": "Ba\u011f\u0131ml\u0131 Kullan\u0131c\u0131",
+            "icon": "fa-calendar-check",
+            "color": "#154360",
+            "description": "30 g\u00fcn \u00fcst \u00fcste giri\u015f yapt\u0131n\u0131z",
+            "category": "membership",
+            "requirement": {
+                "type": "login_streak",
+                "value": 30
+            }
+        },
+        {
+            "id": 45,
+            "name": "Acemi \u00dcye",
+            "icon": "fa-user",
+            "color": "#3498db",
+            "description": "GedikFlix \u00fcyesi olal\u0131 1 ay oldu",
+            "category": "membership",
+            "requirement": {
+                "type": "membership_duration",
+                "value": 30
+            }
+        },
+        {
+            "id": 46,
+            "name": "Deneyimli \u00dcye",
+            "icon": "fa-user",
+            "color": "#2980b9",
+            "description": "GedikFlix \u00fcyesi olal\u0131 3 ay oldu",
+            "category": "membership",
+            "requirement": {
+                "type": "membership_duration",
+                "value": 90
+            }
+        },
+        {
+            "id": 47,
+            "name": "Ba\u011fl\u0131 \u00dcye",
+            "icon": "fa-user",
+            "color": "#1a5276",
+            "description": "GedikFlix \u00fcyesi olal\u0131 6 ay oldu",
+            "category": "membership",
+            "requirement": {
+                "type": "membership_duration",
+                "value": 180
+            }
+        },
+        {
+            "id": 48,
+            "name": "Sad\u0131k Kullan\u0131c\u0131",
+            "icon": "fa-user",
+            "color": "#154360",
+            "description": "GedikFlix \u00fcyesi olal\u0131 1 y\u0131l oldu",
+            "category": "membership",
+            "requirement": {
+                "type": "membership_duration",
+                "value": 365
+            }
+        },
+        {
+            "id": 49,
+            "name": "Film \u00c7e\u015fitlili\u011fi",
+            "icon": "fa-layer-group",
+            "color": "#f39c12",
+            "description": "5 farkl\u0131 kategoriden film izlediniz",
+            "category": "special",
+            "requirement": {
+                "type": "diverse_genres",
+                "value": 5
+            }
+        },
+        {
+            "id": 50,
+            "name": "Film Gurman\u0131",
+            "icon": "fa-layer-group",
+            "color": "#d35400",
+            "description": "10 farkl\u0131 kategoriden film izlediniz",
+            "category": "special",
+            "requirement": {
+                "type": "diverse_genres",
+                "value": 10
+            }
+        },
+        {
+            "id": 51,
+            "name": "Hafta Sonu \u0130zleyicisi",
+            "icon": "fa-couch",
+            "color": "#16a085",
+            "description": "10 hafta sonu filmi izlediniz",
+            "category": "special",
+            "requirement": {
+                "type": "weekend_watch",
+                "value": 10
+            }
+        },
+        {
+            "id": 52,
+            "name": "Tatil Ba\u011f\u0131ml\u0131s\u0131",
+            "icon": "fa-gifts",
+            "color": "#e74c3c",
+            "description": "Resmi tatil g\u00fcnlerinde 5 film izlediniz",
+            "category": "special",
+            "requirement": {
+                "type": "holiday_watch",
+                "value": 5
+            }
+        },
+        {
+            "id": 53,
+            "name": "Erken Ku\u015f",
+            "icon": "fa-sun",
+            "color": "#f1c40f",
+            "description": "Sabah saatlerinde (06:00-09:00) 5 film izlediniz",
+            "category": "special",
+            "requirement": {
+                "type": "morning_watch",
+                "value": 5
+            }
+        },
+        {
+            "id": 54,
+            "name": "Aktif Kullan\u0131c\u0131",
+            "icon": "fa-bolt",
+            "color": "#9b59b6",
+            "description": "1 g\u00fcn i\u00e7inde 3 farkl\u0131 film etkile\u015fiminde bulundunuz",
+            "category": "special",
+            "requirement": {
+                "type": "daily_interactions",
+                "value": 3
+            }
+        },
+        {
+            "id": 55,
+            "name": "Premium \u0130zleyici",
+            "icon": "fa-crown",
+            "color": "#f1c40f",
+            "description": "\u0130lk Premium film izlendi",
+            "category": "special",
+            "requirement": {
+                "type": "premium_watch",
+                "value": 1
+            }
+        },
+        {
+            "id": 56,
+            "name": "\u00d6zel Koleksiyoncu",
+            "icon": "fa-gem",
+            "color": "#9b59b6",
+            "description": "\u0130lk \u00f6zel koleksiyon filmi izlendi",
+            "category": "special",
+            "requirement": {
+                "type": "collection_watch",
+                "value": 1
+            }
+        },
+        {
+            "id": 57,
+            "name": "Klasik Film Merakl\u0131s\u0131",
+            "icon": "fa-film",
+            "color": "#34495e",
+            "description": "5 klasik film izlediniz",
+            "category": "special",
+            "requirement": {
+                "type": "classic_watch",
+                "value": 5
+            }
+        },
+        {
+            "id": 58,
+            "name": "Film Festivali",
+            "icon": "fa-film",
+            "color": "#e74c3c",
+            "description": "Festival se\u00e7kisinden 3 film izlediniz",
+            "category": "special",
+            "requirement": {
+                "type": "festival_watch",
+                "value": 3
+            }
+        },
+        {
+            "id": 59,
+            "name": "Yeni \u00c7\u0131kan",
+            "icon": "fa-certificate",
+            "color": "#e74c3c",
+            "description": "Platformda yay\u0131nland\u0131ktan 24 saat i\u00e7inde bir film izlediniz",
+            "category": "special",
+            "requirement": {
+                "type": "new_release_watch",
+                "value": 1
+            }
+        },
+        {
+            "id": 60,
+            "name": "Trend Takip\u00e7isi",
+            "icon": "fa-chart-line",
+            "color": "#3498db",
+            "description": "5 pop\u00fcler filmi izlediniz",
+            "category": "special",
+            "requirement": {
+                "type": "trending_watch",
+                "value": 5
+            }
+        },
+        {
+            "id": 61,
+            "name": "Ger\u00e7ek Film A\u015f\u0131\u011f\u0131",
+            "icon": "fa-redo",
+            "color": "#9b59b6",
+            "description": "Ayn\u0131 filmi 3 kez izlediniz",
+            "category": "special",
+            "requirement": {
+                "type": "rewatch_count",
+                "value": 3
+            }
+        },
+        {
+            "id": 62,
+            "name": "Efsane \u0130zleyici",
+            "icon": "fa-trophy",
+            "color": "#f39c12",
+            "description": "IMDb puan\u0131 8.5 \u00fczeri 10 film izlediniz",
+            "category": "special",
+            "requirement": {
+                "type": "high_rated_watch",
+                "value": 10,
+                "min_rating": 8.5
+            }
+        }
+    ],
+    "users": {
+        "1": {
+            "earned_badges": [
+                11
+            ],
+            "progress": {
+                "1": {
+                    "current": 0,
+                    "target": 50
+                },
+                "4": {
+                    "current": 0,
+                    "target": 100
+                },
+                "6": {
+                    "current": 0,
+                    "target": 1
+                },
+                "7": {
+                    "current": 0,
+                    "target": 10
+                },
+                "8": {
+                    "current": 0,
+                    "target": 100
+                }
+            }
+        },
+        "5": {
+            "earned_badges": [
+                6,
+                11
+            ],
+            "progress": {
+                "13": {
+                    "current": 1,
+                    "target": 10
+                },
+                "5": {
+                    "current": 0,
+                    "target": 500
+                },
+                "6": {
+                    "current": 1,
+                    "target": 1
+                },
+                "7": {
+                    "current": 2,
+                    "target": 7
+                },
+                "8": {
+                    "current": 2,
+                    "target": 14
+                },
+                "11": {
+                    "current": 1,
+                    "target": 1
+                },
+                "1": {
+                    "current": 2,
+                    "target": 50
+                },
+                "4": {
+                    "current": 2,
+                    "target": 100
+                },
+                "9": {
+                    "current": 0,
+                    "target": 5
+                },
+                "10": {
+                    "current": 1,
+                    "target": 3
+                },
+                "3": {
+                    "current": 0,
+                    "target": 30
+                },
+                "2": {
+                    "current": 1,
+                    "target": 10
+                },
+                "18": {
+                    "current": 0,
+                    "target": 10
+                },
+                "19": {
+                    "current": 0,
+                    "target": 50
+                },
+                "20": {
+                    "current": 0,
+                    "target": 100
+                }
+            },
+            "new_badges": []
+        }
+    }
+}

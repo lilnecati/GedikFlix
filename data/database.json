@@ -1,0 +1,467 @@
+{
+    "movies": [
+
+
+
+
+
+
+
+        {
+            "id": 1,
+                    "title": "Esaretin Bedeli",
+                    "description": "1940'larda genç ve başarılı bir bankacı olan Andy Dufresne, karısını ve sevgilisini öldürmekle suçlanarak Shawshank Hapishanesi'ne gönderilir. Burada, hapishane hayatının zorluklarıyla mücadele ederken, Red adlı bir mahkumla derin bir dostluk kurar. Hapishanedeki yıllar içinde, Andy zekasını ve bankacılık becerilerini kullanarak hem gardiyanların hem de hapishane müdürünün güvenini kazanır ve hapishanenin mali işlerini yönetmeye başlar. Ancak Andy'nin masumiyeti ve özgürlüğe olan inancı asla kaybolmaz ve yıllar boyunca sabırla ve zekice bir kaçış planı hazırlar. Film, umut, dostluk ve özgürlüğün gücünü anlatırken, insan ruhunun en zor şartlarda bile hayatta kalabilme yeteneğini gösterir.",
+                    "year": 1994,
+                    "duration": 142,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+                    "featured": true,
+                    "created_at": "2023-10-01 12:00:00",
+                    "category": {
+                        "id": 4,
+                        "name": "Dram"
+                    }
+                },
+                {
+                    "id": 2,
+                    "title": "Baba",
+                    "description": "1940'ların New York'unda, saygın bir mafya ailesi olan Corleone ailesinin patriarki Don Vito Corleone, kızının düğünü sırasında çeşitli ricaları kabul eder. Aile işlerinden uzak durmaya çalışan en küçük oğlu Michael, babasına yapılan bir suikast girişiminin ardından, istemese de aile işlerine dahil olmak zorunda kalır. Film, Michael'ın dönüşümünü ve Corleone ailesinin rakip mafya aileleriyle olan çatışmalarını anlatırken, aile bağları, onur, bağlılık ve güç gibi temaları işler. Marlon Brando ve Al Pacino'nun unutulmaz performansları, güçlü senaryosu ve atmosferik yönetmenliğiyle, film sadece bir suç draması değil, aynı zamanda Amerikan rüyasının karanlık yüzünü ele alan bir aile destanı olarak sinema tarihine geçmiştir.",
+                    "year": 1972,
+                    "duration": 175,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+                    "featured": true,
+                    "created_at": "2023-10-02 12:00:00",
+                    "category": {
+                        "id": 3,
+                        "name": "Suç"
+                    }
+                },
+                {
+                    "id": 3,
+                    "title": "Kara Şövalye",
+                    "description": "Gotham Şehri'nin karanlık kahramanı Batman, şehri kaosa sürükleyen Joker ile mücadele eder. Bruce Wayne/Batman, yeni müttefiki Savcı Harvey Dent ve Teğmen Jim Gordon ile birlikte şehirdeki suç örgütlerine karşı savaşırken, Joker adında gizemli bir suçlu ortaya çıkar ve hızla korku ve düzensizlik yaratmaya başlar. Joker'in tek amacı kaos yaratmak ve Batman'i kendi ilkelerini çiğnemeye zorlamaktır. Christopher Nolan'ın yönettiği ve Heath Ledger'ın unutulmaz Joker performansıyla öne çıkan film, süper kahraman türünün sınırlarını aşarak, ahlaki ikilemler, kaos ve düzen, adaletin sınırları ve kötülüğün doğası gibi derin temaları işleyen karanlık ve felsefi bir suç draması olarak öne çıkar.",
+                    "year": 2008,
+                    "duration": 152,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+                    "featured": true,
+                    "created_at": "2023-10-03 12:00:00",
+                    "category": {
+                        "id": 2,
+                        "name": "Aksiyon"
+                    }
+                },
+                {
+                    "id": 4,
+                    "title": "Baba 2",
+                    "description": "Francis Ford Coppola'nın yönettiği bu destansı film, iki paralel hikaye anlatır: Genç Vito Corleone'nin (Robert De Niro) 1920'lerde mafya dünyasındaki yükselişi ve oğlu Michael Corleone'nin (Al Pacino) 1950'lerde aile imparatorluğunu yönetme çabaları. Michael, babasının mirasını korumak ve ailesini güvende tutmak için giderek daha acımasız hale gelirken, genç Vito'nun hikayesi, Sicilya'dan Amerika'ya göç etmesi ve suç dünyasında saygı kazanmasını anlatır. Film, güç, aile, göç ve Amerikan rüyasının karanlık yüzü gibi temaları inceleyerek, orijinal 'Baba' filminin dünyasını genişletir ve derinleştirir. Hem bir devam filmi hem de bir ön hikaye olarak, 'Baba 2' sinema tarihinin en başarılı devam filmlerinden biri olarak kabul edilir.",
+                    "year": 1974,
+                    "duration": 202,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-04 12:00:00",
+                    "category": {
+                        "id": 3,
+                        "name": "Suç"
+                    }
+                },
+                {
+                    "id": 5,
+                    "title": "12 Öfkeli Adam",
+                    "description": "Sidney Lumet'in yönettiği bu klasik adalet draması, babası cinayetiyle suçlanan 18 yaşındaki bir gencin davasını karara bağlamakla görevli 12 jüri üyesinin odada kapalı kaldığı süreci konu alır. Başlangıçta 11 jüri üyesi sanığın suçlu olduğuna inanırken, 8. Jüri Üyesi (Henry Fonda) mantıklı şüpheler öne sürerek diğerlerini yeniden düşünmeye zorlar. Film ilerledikçe, her jüri üyesinin kişisel önyargıları, geçmişleri ve karakter özellikleri ortaya çıkar ve dava hakkındaki görüşlerini nasıl etkilediği gözlemlenir. Tek bir mekan içinde geçen bu gerilim dolu drama, adalet sistemi, önyargı, ırkçılık ve makul şüphe kavramları üzerine güçlü bir inceleme sunar. Filmin gücü, karakterlerin derinliği, diyalogların keskinliği ve insanın doğru ile yanlış arasındaki mücadelesini etkileyici bir şekilde yansıtmasında yatar.",
+                    "year": 1957,
+                    "duration": 96,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/ow3wq89wM8qd5X7hWKxiRfsFf9C.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-05 12:00:00",
+                    "category": {
+                        "id": 4,
+                        "name": "Dram"
+                    }
+                },
+                {
+                    "id": 6,
+                    "title": "Yüzüklerin Efendisi: Kralın Dönüşü",
+                    "description": "Peter Jackson'ın epik üçlemesinin final filmi, Frodo ve Sam'in, Gollum'un rehberliğinde, Tek Yüzük'ü yok etmek için Mordor'daki Hüküm Dağı'na olan tehlikeli yolculuklarını sürdürdüğü noktadan başlar. Bu sırada Aragorn, Gondor'un gerçek kralı olarak kaderini gerçekleştirmek ve Sauron'un kötü güçlerini Minas Tirith'te yenmek için ölülerin ordusunu çağırmak zorundadır. Pelennor Ovalarında devasa ordular çarpışırken, Frodo Yüzük'ün artan gücüyle mücadele eder ve zihnini ele geçirmeye başlar. Sam'in sarsılmaz sadakati, görevlerinin başarısı için kritik hale gelir. Film, görkemli savaşları, duygusal karakter yolculukları ve cesaret ile dostluğun nihai sınavıyla üçlemeyi muhteşem bir sonuca ulaştırır. Geniş anlatısıyla hikaye, güç ve yozlaşma, fedakarlık, dostluk ve en küçük bireylerin bile tarihin akışını değiştirme gücü gibi temaları ele alır.",
+                    "year": 2003,
+                    "duration": 201,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+                    "featured": true,
+                    "created_at": "2023-10-06 12:00:00",
+                    "category": {
+                        "id": 5,
+                        "name": "Fantastik"
+                    }
+                },
+                {
+                    "id": 7,
+                    "title": "Schindler'in Listesi",
+                    "description": "Steven Spielberg'in yönettiği ve gerçek bir hayat hikayesinden uyarlanan bu film, II. Dünya Savaşı sırasında Nazi işgalindeki Polonya'da, Alman işadamı Oskar Schindler'in (Liam Neeson) Yahudi işçileri çalıştırdığı fabrikasıyla başlangıçta sadece kar amacı güderken, zamanla gözleri önünde gerçekleşen soykırım karşısında vicdani bir uyanış yaşamasını anlatır. Schindler, Yahudi muhasebecisi Itzhak Stern'in (Ben Kingsley) yardımıyla, çalışanlarını ve ailelerini toplama kamplarından kurtarmak için bir liste hazırlar ve tüm servetini bu insanları kurtarmak için harcar. Film, tarihsel olayları siyah-beyaz çekimlerle aktarırken, insanlığın en karanlık dönemlerinden birinde bile umut ve iyiliğin var olabileceğini gösterir.",
+                    "year": 1993,
+                    "duration": 195,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+                    "featured": true,
+                    "created_at": "2023-10-07 12:00:00",
+                    "category": {
+                        "id": 4,
+                        "name": "Dram"
+                    }
+                },
+                {
+                    "id": 8,
+                    "title": "Ucuz Roman",
+                    "description": "Quentin Tarantino'nun yönetmenlik ve senaristliğini üstlendiği bu kült film, Los Angeles'ın yeraltı dünyasında geçen, birbiriyle kesişen dört ayrı hikayeyi anlatır. Gangster, boksör, tetikçi ve mafya patronunun karılarının hayatları, beklenmedik şekillerde birbirine karışır. Vincent Vega (John Travolta) ve Jules Winnfield (Samuel L. Jackson), patronları Marsellus Wallace (Ving Rhames) için çalışan iki tetikçidir. Vincent, Marsellus'un güzel karısı Mia (Uma Thurman) ile bir akşam geçirmeye zorlanır ve bu gece beklenmedik bir şekilde gelişir. Aynı zamanda, yaşlı bir boksör olan Butch Coolidge (Bruce Willis), Marsellus'a bir maçı kaybetme sözü verir ama sözünü tutmaz ve kaçmak zorunda kalır. Tarantino'nun karakteristik diyalogları, kronolojik olmayan anlatım yapısı ve 70'lerin pop kültürüne yapılan referanslar, filmi sıra dışı bir deneyime dönüştürür.",
+                    "year": 1994,
+                    "duration": 154,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-08 12:00:00",
+                    "category": {
+                        "id": 3,
+                        "name": "Suç"
+                    }
+                },
+                {
+                    "id": 9,
+                    "title": "Yüzüklerin Efendisi: Yüzük Kardeşliği",
+                    "description": "J.R.R. Tolkien'in epik fantastik edebiyat serisinin ilk film uyarlaması olan bu yapım, Orta Dünya'nın kaderini değiştirecek bir maceraya atılan farklı ırkların kahramanlarını konu alır. Genç ve mütevazı bir hobbit olan Frodo Baggins (Elijah Wood), kendisini beklenmedik bir görevin ortasında bulur: Karanlık Lord Sauron'un gücünün kaynağı olan Tek Yüzük'ü yok etmek için tehlikeli bir yolculuğa çıkmalıdır. Sauron'un güçleri, yüzüğü ele geçirmek için her yöne yayılırken, Frodo ve sadık arkadaşı Sam (Sean Astin), büyücü Gandalf (Ian McKellen), insan savaşçı Aragorn (Viggo Mortensen), cüce Gimli (John Rhys-Davies), elf Legolas (Orlando Bloom) ve diğerlerinden oluşan bir kardeşlik grubuyla birlikte, Mordor'daki Hüküm Dağı'na doğru tehlikeli bir yolculuğa başlar. Yolculuk boyunca, bu farklı ırkların temsilcileri, birbirlerine olan güvensizliklerini aşarak, karanlık güçlere karşı birleşik bir cephe oluşturur.",
+                    "year": 2001,
+                    "duration": 178,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-09 12:00:00",
+                    "category": {
+                        "id": 5,
+                        "name": "Fantastik"
+                    }
+                },
+                {
+                    "id": 10,
+                    "title": "İyi, Kötü ve Çirkin",
+                    "description": "Sergio Leone'nin yönettiği bu ikonik İtalyan western filmi, İç Savaş döneminde geçen ve üç silahlı adamın - 'İyi' (Clint Eastwood), 'Kötü' (Lee Van Cleef) ve 'Çirkin' (Eli Wallach) - çölde gömülü olduğu söylenen bir hazineyi bulma yarışını konu alır. Her biri hazineye tek başına ulaşmak isterken, birbirlerinin bilgilerine de ihtiyaç duyarlar, bu nedenle ittifaklar ve ihanetlerle dolu bir macera başlar. Film, geniş çöl manzaraları, yakın çekim kullanımı, Ennio Morricone'nin unutulmaz müziği ve üç karakterin ahlaki karmaşıklığıyla western türünün en etkileyici örneklerinden biri olarak kabul edilir. Leone'nin yönetmenliği, ahlaki belirsizlikleri ve şiddetin kaçınılmazlığını işleyerek genre yeni bir boyut kazandırmıştır.",
+                    "year": 1966,
+                    "duration": 161,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/6B5bTuZEzLV8vrjCNGqIxURrgOd.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-10 12:00:00",
+                    "category": {
+                        "id": 8,
+                        "name": "Western"
+                    }
+                },
+                {
+                    "id": 11,
+                    "title": "Forrest Gump",
+                    "description": "Robert Zemeckis'in yönettiği bu film, düşük IQ'lu ama iyi kalpli Forrest Gump'ın (Tom Hanks) olağanüstü yaşamını anlatır. Forrest, çocukluk aşkı Jenny (Robin Wright) ile ilişkisi, Vietnam Savaşı'nda geçirdiği dönem, ping-pong şampiyonluğu ve karides teknesi işletme gibi sayısız macera yaşarken, farkında olmadan 20. yüzyılın birçok önemli olayına tanıklık eder ve hatta bu olayları etkiler. Film, koşma yeteneği sayesinde Amerikan futbol yıldızı olan, Vietnam Savaşı'nda madalya kazanan, ping-pong diplomatı olan ve başarılı bir iş adamına dönüşen Forrest'ın hikayesini, tarihsel olaylarla harmanlayarak sunar. Aşk, dostluk, kayıp ve Amerika'nın yakın tarihini kişisel bir hikaye üzerinden işleyen 'Forrest Gump', 'Hayat bir kutu çikolata gibidir. Ne çıkacağını asla bilemezsin.' gibi unutulmaz repliklerle de popüler kültürde yer edinmiştir.",
+                    "year": 1994,
+                    "duration": 142,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-11 12:00:00",
+                    "category": {
+                        "id": 4,
+                        "name": "Dram"
+                    }
+                },
+                {
+                    "id": 12,
+                    "title": "Yüzüklerin Efendisi: İki Kule",
+                    "description": "Yüzüklerin Efendisi üçlemesinin ikinci filmi, Tek Yüzük'ü yok etme görevinin devamını anlatır. Frodo ve Sam, Yüzük'ü Mordor'a götürmeye çalışırken, gizemli ve ikiyüzlü bir rehber olan Gollum ile tanışırlar. Bu sırada, Yüzük Kardeşliği'nin diğer üyeleri farklı yollara ayrılmıştır: Aragorn, Legolas ve Gimli, kaçırılan hobbitler Merry ve Pippin'i kurtarmak için Rohan topraklarına gider ve orada Rohan Kralı Theoden'in Saruman'ın etkisinden kurtulmasına yardım ederler. Merry ve Pippin ise, kadim Ent'lerin yardımını kazanmaya çalışır. Film, Orta Dünya'nın farklı bölgelerinde gerçekleşen olayları paralel olarak anlatırken, Helm Dibi Savaşı ve Isengard'ın düşüşü gibi etkileyici savaş sahneleri sunar. Peter Jackson'ın yönettiği film, görsel efektleri, karakter gelişimleri ve epik aksiyon sahneleriyle, orijinal üçlemenin en karanlık ve en yoğun parçası olarak kabul edilir.",
+                    "year": 2002,
+                    "duration": 179,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-12 12:00:00",
+                    "category": {
+                        "id": 5,
+                        "name": "Fantastik"
+                    }
+                },
+                {
+                    "id": 13,
+                    "title": "Dövüş Kulübü",
+                    "description": "İsimsiz anlatıcı (Edward Norton), sıkıcı hayatından ve tüketim toplumundaki yaşam tarzından memnun olmayan, kronik uykusuzluk sorunu yaşayan bir ofis çalışanıdır. Doktorunun önerisiyle, çeşitli hastalık destek gruplarına katılır. Bu gruplarda başka bir 'turist' olan Marla Singer (Helena Bonham Carter) ile tanışır. Bir iş seyahati sırasında karizmatik ve sıra dışı bir sabun satıcısı olan Tyler Durden (Brad Pitt) ile tanışır. Tyler, anlatıcının evinin gizemli bir patlamada yok olmasından sonra onunla birlikte yaşamaya başlar ve ikili, erkeklerin ilkel içgüdülerine dönmelerine olanak tanıyan bir yeraltı dövüş kulübü kurar. Ancak kulüp zamanla 'Kaos Projesi' adında bir anarşist harekete dönüşür ve kontrolden çıkar. David Fincher'ın yönettiği ve Chuck Palahniuk'un romanından uyarlanan film, modern erkeklik, tüketimcilik, kimlik krizi ve toplumsal yabancılaşma üzerine karanlık bir meditasyon sunar. Şok edici dönüşleri, stilize şiddet sahneleri ve nihilist felsefesiyle, film önce bölünmüş eleştiriler alsa da, zamanla kült bir klasiğe dönüşmüştür.",
+                    "year": 1999,
+                    "duration": 139,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-13 12:00:00",
+                    "category": {
+                        "id": 4,
+                        "name": "Dram"
+                    }
+                },
+                {
+                    "id": 14,
+                    "title": "Başlangıç",
+                    "description": "Christopher Nolan'ın yönettiği bu bilim kurgu gerilim filmi, rüyalara sızma ve bilinçaltından değerli sırları çalma konusunda uzmanlaşmış bir hırsız olan Dom Cobb'un (Leonardo DiCaprio) hikayesini anlatır. Cobb'a, imkansız görünen bir görev sunulur: bir fikri çalmak yerine, bir kişinin zihnine bir fikir yerleştirmek, yani 'başlangıç' yapmak. Eğer başarılı olursa, özgürlüğünü geri kazanacak ve çocuklarına kavuşacaktır. Bu zorlu görevi gerçekleştirmek için, farklı uzmanlıklara sahip bir ekip kurar ve hedeflerinin zihnine, rüya içinde rüya şeklinde katmanlı bir yapı oluşturarak girmeye çalışırlar. Ancak, Cobb'un geçmişinden gelen suçluluk duyguları ve ölmüş eşinin anıları (Marion Cotillard), görevi tehlikeye atarak ekibin zihin labirentlerinde kaybolma riskini artırır. Film, zaman, gerçeklik, hafıza ve pişmanlık kavramlarını sorguladığı rüya içinde rüya yapısı ile izleyiciyi şaşırtmaya devam ederken, zengin görsel efektler ve Nolan'ın ustalıklı yönetmenliği ile sinema tarihinin en etkileyici bilim kurgu yapımlarından biri olarak kabul edilir.",
+            "year": 2010,
+            "duration": 148,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-14 12:00:00",
+                    "category": {
+                        "id": 1,
+                        "name": "Bilim Kurgu"
+                    }
+                },
+                {
+                    "id": 15,
+                    "title": "Yıldız Savaşları: İmparator",
+                    "description": "Star Wars serisinin beşinci filmi (kronolojik olarak ikinci), Asi İttifak'ın Yavin'deki zaferinden sonra kaçan Luke Skywalker, Prenses Leia, Han Solo ve diğer isyancıları takip eden. Luke, Jedi eğitimini tamamlamak için Dagobah gezegeninde Üstat Yoda'yı bulmaya gider. Bu sırada, Han ve Leia, Han'ın eski arkadaşı Lando Calrissian'ın yönettiği Bulut Şehri'ne sığınırlar, ancak bu bir tuzaktır ve Darth Vader'ın ellerine düşerler. Vader, Han'ı dondurup ödül avcısı Boba Fett'e verir ve Luke'u tuzağa düşürmek için Leia ve diğerlerini kullanır. Luke, arkadaşlarını kurtarmak için eğitimini yarıda bırakarak Bulut Şehri'ne gider ve Vader ile karşı karşıya gelir. Bu karşılaşma, Luke'un sadece Vader'ın güçlerini değil, aynı zamanda kendi kimliğini de keşfetmesine yol açar. Irvin Kershner'ın yönettiği film, serinin en karanlık ve duygusal açıdan en yoğun filmi olarak kabul edilir ve içerdiği 'Ben senin babanım' sahnesi, sinema tarihinin en ikonik anlarından biri olarak hafızalara kazınmıştır.",
+                    "year": 1980,
+                    "duration": 124,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/2l05cFWJacyIsTpsqSgH0wQXe4V.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-15 12:00:00",
+                    "category": {
+                        "id": 1,
+                        "name": "Bilim Kurgu"
+                    }
+                },
+                {
+                    "id": 16,
+                    "title": "Matrix",
+                    "description": "Lana ve Lilly Wachowski'nin yönettiği bu devrim niteliğindeki bilim kurgu filmi, gündüzleri sıradan bir yazılım mühendisi, geceleri ise Neo adında bir hacker olan Thomas Anderson'ın (Keanu Reeves) hikayesini anlatır. Neo, gizemli bir adam olan Morpheus (Laurence Fishburne) tarafından kendisine sunulan kırmızı hapı alarak, yaşadığı dünyanın aslında bilgisayar tarafından yaratılmış bir simülasyon olduğunu ve gerçek dünyanın, makinelerin insanları enerji kaynağı olarak kullandığı distopik bir gelecek olduğunu öğrenir. Morpheus, Neo'nun insanlığı kurtaracak 'Seçilmiş Kişi' olduğuna inanır ve onu Matrix'in kurallarını manipüle etme ve makinelere karşı savaşma konusunda eğitir. Film, gerçeklik algısı, özgür irade, makinelerin yükselişi ve insanlığın geleceği gibi felsefi sorgulamaların yanı sıra, çığır açan 'bullet time' efekti ve etkileyici dövüş koreografileriyle sinema tarihinde bir dönüm noktası oluşturmuştur.",
+                    "year": 1999,
+                    "duration": 136,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-16 12:00:00",
+                    "category": {
+                        "id": 1,
+                        "name": "Bilim Kurgu"
+                    }
+                },
+                {
+                    "id": 17,
+                    "title": "Sıkı Dostlar",
+                    "description": "Martin Scorsese'nin yönettiği, gerçek olaylardan esinlenen bu mafya filmi, Henry Hill'in (Ray Liotta) Brooklyn'deki küçük bir suçlu olarak başlayıp, İtalyan mafyasının en üst seviyelerine yükselişinin hikayesini anlatır. Henry, karizmatik gangster Jimmy Conway (Robert De Niro) ve psikopat mafya üyesi Tommy DeVito (Joe Pesci) ile yakın arkadaş olur. Ancak, Henry'nin bir İtalyan olmayışı, tam anlamıyla 'made man' (mafya üyesi) olmasına engel teşkil eder. Film, 1950'lerden 1980'lere kadar uzanan bir zaman diliminde, Henry'nin suç dünyasındaki yükselişini, düşüşünü, evliliğini, uyuşturucu bağımlılığını ve sonunda FBI muhbiri olarak yeni bir kimlik edinmesini anlatır. Scorsese'nin yönetmenliği, karakterlerin derinliği, dönem atmosferinin canlılığı ve şiddet sahnelerinin gerçekçiliğiyle öne çıkan film, mafya türünün en etkili ve saygın örneklerinden biri olarak kabul edilir ve karizmatik suçlulara karşı duyulan çekiciliği sorgular.",
+                    "year": 1990,
+                    "duration": 145,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/oErEczcVUmJm0EPdvWsvK4g4Lv3.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-17 12:00:00",
+                    "category": {
+                        "id": 3,
+                        "name": "Suç"
+                    }
+                },
+                {
+                    "id": 18,
+                    "title": "Guguk Kuşu",
+                    "description": "Miloš Forman'ın yönettiği ve Ken Kesey'in romanından uyarlanan bu dram, küçük suçlar işleyip akıl hastalığı numarası yaparak Oregon'daki bir akıl hastanesine yatırılan Randle P. McMurphy'nin (Jack Nicholson) hikayesini anlatır. McMurphy, katı ve otoriter Hemşire Ratched'in (Louise Fletcher) yönetimindeki hastanede özgür ruhlu ve isyankar yapısıyla, diğer hastaların baskı altında tutulmuş hayatlarına yeni bir soluk getirir. Zamanla McMurphy, hastaların Ratched'in baskıcı rejimine karşı bir isyan başlatmasına öncülük eder, ancak bu mücadele trajik sonuçlara yol açacaktır. Film, bireysel özgürlük, otorite, baskı, insan onuru ve kurumsal şiddet temaları üzerine güçlü bir sosyal eleştiri sunar. Jack Nicholson'ın kariyerinin dönüm noktalarından biri olan bu performansıyla, film beş dalda Oscar kazanmış (En İyi Film, Yönetmen, Erkek Oyuncu, Kadın Oyuncu ve Uyarlama Senaryo) ve sinema tarihinin en önemli yapımlarından biri olarak kabul edilmiştir.",
+                    "year": 1975,
+                    "duration": 133,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/3jcbDmRFiQ83drXNOvRDeKHxS0C.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-18 12:00:00",
+            "category": {
+                "id": 4,
+                        "name": "Dram"
+                    }
+                },
+                {
+                    "id": 19,
+                    "title": "Yıldızlararası",
+                    "description": "Christopher Nolan'ın yönettiği bu epik bilim kurgu filmi, yakın gelecekte, dünyanın bir toz çölüne dönüştüğü ve insanlığın açlıkla mücadele ettiği bir dönemde geçer. Eski bir NASA pilotu olan Cooper (Matthew McConaughey), dünyaya yakın bir solucan deliği keşfeden bir grup bilim insanı tarafından uzaya, potansiyel yaşanabilir gezegenleri keşfetmeye gönderilir. Ancak bu görev, kızı Murph'ü (Jessica Chastain/Mackenzie Foy) geride bırakması anlamına gelir. Cooper ve ekibi, zaman göreceliği nedeniyle zorlu kararlar almak zorunda kalırken, dünya üzerinde kalan Murph, insanlığı kurtarmak için çalışır. Film, zaman ve uzayın karmaşıklıklarını, bilimsel doğruluk ve duygusal derinlikle harmanlayarak, insanlığın hayatta kalma mücadelesi ve sevginin zaman ve uzay boyunca aşabileceği sınırlar üzerine derin bir inceleme sunar. Görsel efektleri, Hans Zimmer'ın etkileyici müziği ve bilimsel danışman Kip Thorne'un katkılarıyla, film sadece bir bilim kurgu macerası değil, aynı zamanda aile, fedakarlık ve insanlığın sınırlarını aşma gücü üzerine duygusal bir hikaye anlatır.",
+                    "year": 2014,
+                    "duration": 169,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+            "featured": true,
+                    "created_at": "2023-10-19 12:00:00",
+                    "category": {
+                        "id": 1,
+                        "name": "Bilim Kurgu"
+                    }
+                },
+                {
+                    "id": 20,
+                    "title": "Yedi",
+                    "description": "David Fincher'ın yönettiği bu karanlık gerilim filmi, emekliliğe ayrılmaya hazırlanan deneyimli dedektif William Somerset (Morgan Freeman) ve onun yeni, ateşli ortağı David Mills'in (Brad Pitt), yedi ölümcül günaha (kibir, açgözlülük, şehvet, kıskançlık, oburluk, tembellik ve öfke) dayalı bir dizi seri cinayeti araştırmasını konu alır. Becerikli ve zeki bir seri katil olan John Doe (Kevin Spacey), her kurbanını, işlediği günahın simgesi olacak şekilde öldürmektedir. Dedektifler, ipuçlarını ve Ortaçağ edebiyatındaki referansları takip ederek katili bulmaya çalışırken, karşılarına çıkan her yeni cinayet, onları daha derin bir karanlığa sürükler. Film, şehrin sürekli yağmur altındaki kasvetli atmosferi, rahatsız edici cinayet sahneleri ve şok edici finaliyle, insan kötülüğü, modern toplumun ahlaki çöküşü ve adalet kavramı üzerine rahatsız edici sorular sorar. Fincher'ın yönetmenliği, Andrew Kevin Walker'ın senaryosu ve başrol oyuncularının etkileyici performanslarıyla, 'Yedi', gerilim türünün en etkileyici ve akılda kalıcı örneklerinden biri olarak kabul edilir.",
+                    "year": 1995,
+                    "duration": 127,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/6yoghtyTpznpBik8EngEmJskVUO.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-20 12:00:00",
+                    "category": {
+                        "id": 6,
+                        "name": "Gerilim"
+                    }
+                },
+                {
+                    "id": 21,
+                    "title": "Şahane Hayat",
+                    "description": "Frank Capra'nın yönettiği bu klasik film, Bedford Falls adlı küçük bir kasabada yaşayan iyi kalpli, fedakar ama hayal kırıklığına uğramış bir banka çalışanı olan George Bailey'nin (James Stewart) hikayesini anlatır. George, Noel Arifesi'nde, bankasındaki mali bir kriz nedeniyle intihara teşebbüs eder. Tam o sırada, Clarence adlı ikinci sınıf bir melek, ona yardım etmek için gönderilir. Clarence, George'a, eğer hiç doğmamış olsaydı dünyada neler olacağını göstererek, aslında ne kadar değerli bir hayat yaşadığını ve çevresindekilerin hayatlarını ne kadar olumlu etkilediğini fark etmesini sağlar. Film, bir kişinin diğerlerinin hayatları üzerindeki etkisini ve her hayatın, ne kadar sıradan görünürse görünsün, aslında ne kadar önemli olduğunu vurgular. İlk gösteriminde büyük bir ticari başarı yakalayamasa da, zamanla Amerikan sinemasının en sevilen klasiklerinden biri haline gelen film, umut, aile, topluluk ve hayatın değeri temaları etrafında dokunaklı bir hikaye anlatır.",
+                    "year": 1946,
+                    "duration": 130,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/6AvXD9DNTk02VJK2HZ3lWH7IOAT.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-21 12:00:00",
+                    "category": {
+                        "id": 4,
+                        "name": "Dram"
+                    }
+                },
+                {
+                    "id": 22,
+                    "title": "Yedi Samuray: Kanlı Pirinç",
+                    "description": "Akira Kurosawa'nın yönettiği bu epik samuray filmi, 16. yüzyıl Japonya'sında geçer ve eşkıyalar tarafından sürekli yağmalanan bir köyün hikayesini anlatır. Umutsuz köylüler, bir sonraki hasat mevsiminde kendilerini korumak için yedi samuray kiralarlar. Film, samurayların her birinin farklı kişiliklerini ve becerilerini tanıtırken, köylülerle kurdukları ilişkileri ve onları eşkıyalara karşı nasıl eğittiklerini gösterir. Köy, lider samuray Kambei (Takashi Shimura) ve ekibi tarafından savunma için hazırlanırken, kültürel farklılıklar ve güvensizlikler zamanla yerini karşılıklı saygı ve işbirliğine bırakır. Final savaşı, sinema tarihinin en ikonik aksiyon sekanslarından biridir ve yağmurda geçen bu çatışma, hem görsel hem de duygusal açıdan etkileyicidir. Film, onur, cesaret, fedakarlık ve farklı sosyal sınıflar arasındaki ilişkiler üzerine derin bir inceleme yaparken, John Sturges'in 'The Magnificent Seven' dahil olmak üzere birçok filme ilham vermiştir. Yedi Samuray, sadece Japon sinemasının değil, dünya sinema tarihinin de en önemli yapımlarından biri olarak kabul edilir.",
+                    "year": 1954,
+                    "duration": 207,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/8OKmBV5BUFzmozIC8Jo5BU5fL5Y.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-22 12:00:00",
+                    "category": {
+                        "id": 2,
+                        "name": "Aksiyon"
+                    }
+                },
+                {
+                    "id": 23,
+                    "title": "Kuzuların Sessizliği",
+                    "description": "Jonathan Demme'nin yönettiği bu psikolojik gerilim filmi, FBI akademisinde eğitim gören Clarice Starling'in (Jodie Foster), kadınları kaçırıp öldüren ve derilerini yüzen seri katil Buffalo Bill'i yakalamak için, hapisteki bir başka seri katil ve eski psikiyatrist Dr. Hannibal Lecter'dan (Anthony Hopkins) yardım istemesini konu alır. Lecter, Starling'in kişisel travmalarını ve geçmişini açığa çıkarırken, onunla bir tür psikolojik satranç oynar ve Buffalo Bill hakkında ipuçları vermeye başlar. Foster ve Hopkins'in unutulmaz performansları, filmin merkezindeki tüyler ürpertici ama aynı zamanda büyüleyici Lecter-Starling dinamiğini yaratır. Gerilimi ustalıkla yöneten Demme, şiddetin çoğunu ekranın dışında tutarak, izleyicinin hayal gücünü kullanmasını sağlar. Film, kadınların güç ve otorite konumlarında karşılaştıkları zorluklar, kimlik, korku ve kötülüğün doğası üzerine düşündürür. 'Kuzuların Sessizliği', Akademi Ödülleri'nde En İyi Film, Yönetmen, Erkek Oyuncu, Kadın Oyuncu ve Uyarlama Senaryo dahil olmak üzere beş dalda Oscar kazanarak, gerilim türünün saygınlığını artırmış ve sinema tarihinin en etkileyici filmlerinden biri olarak kabul edilmiştir.",
+                    "year": 1991,
+                    "duration": 118,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/rplLJ2hPcOQmkFhTqUte0MkEaO2.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-23 12:00:00",
+                    "category": {
+                        "id": 6,
+                        "name": "Gerilim"
+                    }
+                },
+                {
+                    "id": 24,
+                    "title": "Er Ryan'ı Kurtarmak",
+                    "description": "Steven Spielberg'in yönettiği bu savaş filmi, II. Dünya Savaşı'nın en kanlı çatışmalarından biri olan Normandiya Çıkarması'ndan sonra geçer. Film, Kaptan John Miller'ın (Tom Hanks) öncülüğündeki sekiz kişilik bir Amerikan asker grubunun, üç kardeşi savaşta ölen özel Ryan'ı (Matt Damon) bulup eve getirme görevini konu alır. Miller ve ekibi, Normandiya'nın düşman dolu arazisinde ilerlerken, bu tek bir askeri kurtarma görevinin maliyetini ve anlamını sorgularlar. Film, özellikle 27 dakikalık Omaha Beach çıkarma sahnesiyle, savaşın korkunç gerçekliğini olabildiğince doğru bir şekilde yansıtması ve izleyiciyi savaşın ortasına çekmesiyle tanınır. Spielberg'in yönetmenliği, güçlü oyunculuklar ve Janusz Kaminski'nin görüntü yönetmenliği, filmin hem görsel hem de duygusal etkisini güçlendirir. 'Er Ryan'ı Kurtarmak', cesaret, görev, fedakarlık ve savaşın acımasız gerçekleri üzerine derinden düşündürücü bir inceleme sunar, ancak bunu yaparken insanlık ve onur gibi değerlerin savaşın ortasında bile var olabileceğini gösterir.",
+                    "year": 1998,
+                    "duration": 169,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/1wY4psJ5NVEhCuOYbMORRI5ZpjI.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-24 12:00:00",
+                    "category": {
+            "id": 2,
+                        "name": "Aksiyon"
+                    }
+                },
+                {
+                    "id": 25,
+                    "title": "Tanrı Kent",
+                    "description": "Fernando Meirelles ve Kátia Lund'un yönettiği bu Brezilya filmi, Rio de Janeiro'nun kenar mahallelerinden biri olan Cidade de Deus'ta (Tanrı Kenti) 1960'lardan 1980'lere kadar geçen dönemde, yoksulluk, şiddet ve suç döngüsünü konu alır. Film, olayları, fotoğrafçı olmayı hayal eden ve şiddetten uzak durmaya çalışan genç Rocket'ın (Alexandre Rodrigues) gözünden anlatır. Aynı zamanda, acımasız bir uyuşturucu satıcısı ve gangster olan Li'l Zé'nin (Leandro Firmino) yükselişi ve düşüşünü izleriz. Gerçek olaylara dayanan film, favelada yaşayan gençlerin, sınırlı seçenekler ve süregelen şiddet ortamında büyümesini, bazılarının yozlaşıp suça bulaşırken, diğerlerinin ayakta kalmak için mücadele etmesini etkileyici bir şekilde gösterir. Hızlı montaj, el kamerası çekimleri ve canlı renk paleti ile Brezilya'nın yoksul mahallelerinin hem güzelliğini hem de korkunç gerçekliğini yansıtan film, sosyal eşitsizlik, şiddet döngüsü ve hayatta kalma mücadelesi üzerine güçlü bir inceleme sunar.",
+                    "year": 2002,
+                    "duration": 130,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/8lNeWQJ160jP9LBJXqx3bLYpz5k.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-25 12:00:00",
+                    "category": {
+                        "id": 3,
+                        "name": "Suç"
+                    }
+                },
+                {
+                    "id": 26,
+                    "title": "Yeşil Yol",
+                    "description": "Frank Darabont'un yönettiği ve Stephen King'in romanından uyarlanan bu dram, 1930'ların Louisiana'sında, Cold Mountain Hapishanesi'nin ölüm koridorunda görevli olan gardiyan Paul Edgecomb'un (Tom Hanks) hikayesini anlatır. Edgecomb ve diğer gardiyanlar, iki küçük kızı öldürmekle suçlanan John Coffey (Michael Clarke Duncan) adlı iri yapılı, siyahi bir mahkumla tanışırlar. Coffey, fiziksel görünüşünün aksine son derece naif ve yumuşak bir kişiliğe sahiptir ve kısa süre sonra olağanüstü şifa verme yetenekleri olduğu ortaya çıkar. Film ilerledikçe, Paul ve diğer gardiyanlar, Coffey'nin bu yeteneklerinin kaynağını ve onun gerçekten suçlu olup olmadığını sorgulamaya başlarlar. 'Yeşil Yol', idam mahkumlarının son yürüyüşlerini yaptıkları koridorun zemin döşemesinin renginden dolayı aldığı isimdir. Film, ırk ayrımcılığı, adalet, merhamet ve insanlık üzerine düşündürücü bir hikaye anlatırken, doğaüstü unsurları da ustalıkla kullanır. Tom Hanks ve özellikle Oscar adaylığı alan Michael Clarke Duncan'ın etkileyici performanslarıyla, film izleyicileri hem duygusal hem de etik açıdan sarsan, unutulmaz bir deneyim sunar.",
+                    "year": 1999,
+                    "duration": 189,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/velWPhVMQeQKcxggNEU8YmIo52R.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-26 12:00:00",
+                    "category": {
+                        "id": 4,
+                        "name": "Dram"
+                    }
+                },
+                {
+                    "id": 27,
+                    "title": "Hayat Güzeldir",
+                    "description": "Roberto Benigni'nin yönettiği ve başrolünü üstlendiği bu trajikomik film, 1930'ların İtalya'sında, hayat dolu ve hayal gücü yüksek bir Yahudi olan Guido Orefice'nin hikayesini anlatır. Guido, güzel okul öğretmeni Dora ile tanışır, ona kur yapar ve sonunda evlenir. Çiftin Giosué adında bir oğulları olur. Ancak, Mussolini rejimi altında Yahudi karşıtı yasalar güçlenir ve Guido, oğlu ve amcası bir toplama kampına götürülür. Dora, ailesinden ayrılmak istemediği için gönüllü olarak onlarla gider, ancak kampın kadın bölümüne ayrılır. Guido, küçük oğlunu kampın korkunç gerçekliğinden korumak için, tüm durumu bir oyun olarak sunar ve kampın yarışmalarını kazananın bir tank alacağını söyler. Film, Nazi soykırımının dehşetini asla hafifletmeden, bir babanın oğlunu korumak için kullandığı hayal gücünün ve mizahın gücünü gösterir. Benigni'nin şirin ve komik performansı, filmin duygusal etkisini artırırken, aynı zamanda umut, sevgi ve insan ruhunun dayanıklılığı üzerine evrensel bir hikaye anlatır. 'Hayat Güzeldir', Cannes Film Festivali'nde Büyük Jüri Ödülü'nü ve En İyi Yabancı Film dahil üç Oscar kazanmıştır.",
+                    "year": 1997,
+                    "duration": 116,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/6tEJnof1DKWPnl5lzkjf0FVv7oB.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-27 12:00:00",
+                    "category": {
+                        "id": 7,
+                        "name": "Komedi"
+                    }
+                },
+                {
+                    "id": 28,
+                    "title": "Terminatör 2: Mahşer Günü",
+                    "description": "James Cameron'ın yönettiği bu aksiyon-bilim kurgu filmi, orijinal 'Terminatör' filminin devamı niteliğindedir. Film, 2029 yılında yapay zeka sistemi Skynet tarafından insanlığa karşı başlatılan savaşta, direniş lideri John Connor'ın annesi Sarah Connor'ı (Linda Hamilton) ve onun 10 yaşındaki oğlu, geleceğin direniş lideri genç John Connor'ı (Edward Furlong) korumakla görevlendirilen yeniden programlanmış bir T-800 model Terminatör'ün (Arnold Schwarzenegger) hikayesini anlatır. Ancak, Skynet, John'u öldürmek için gelişmiş bir sıvı metal prototip olan T-1000'i (Robert Patrick) göndermiştir. Sarah, oğlu ve T-800, gelecekteki nükleer holokosta yol açacak olayların seyrini değiştirmek ve Skynet'in yaratılışını engellemek için bir araya gelirler. Film, görsel efektleriyle devrim yarattı ve sıvı metal T-1000 karakteri, CGI teknolojisinin sinema tarihindeki en etkileyici kullanımlarından biri olarak kabul edildi. Arnold Schwarzenegger'in ikonik rolünü tekrarladığı film, aksiyon sahneleri, karakter gelişimi ve duygusal derinliğiyle, sadece bir devam filmi değil, aynı zamanda türünün en etkileyici örneklerinden biri olarak kabul edilir.",
+                    "year": 1991,
+                    "duration": 137,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/5M0j0B18abtBI5i0WYww61p6hqA.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-28 12:00:00",
+            "category": {
+                "id": 1,
+                        "name": "Bilim Kurgu"
+                    }
+                },
+                {
+                    "id": 29,
+                    "title": "Yıldız Savaşları: Bölüm IV - Yeni Bir Umut",
+                    "description": "George Lucas'ın yarattığı efsanevi Yıldız Savaşları serisinin ilk filmi olan bu uzay destanı, uzak bir galakside, zalim Galaktik İmparatorluk'a karşı mücadele eden Asi İttifakı'nın hikayesini anlatır. Luke Skywalker (Mark Hamill), bir çiftçiden Jedi adayına dönüşürken, kaçakçı Han Solo (Harrison Ford), Wookie arkadaşı Chewbacca ve iki droid - C-3PO ve R2-D2 - ile bir araya gelir. Ekip, Prenses Leia'yı (Carrie Fisher) İmparatorluk'un korkunç silahı Ölüm Yıldızı'ndan kurtarmak ve Asi İttifakı'na yardım etmek için zorlu bir maceraya atılır. Yolculukları sırasında Luke, eski Jedi Şövalyesi Obi-Wan Kenobi'den (Alec Guinness) Güç'ü kullanmayı öğrenir ve galaksinin en korkulan kötü karakterlerinden biri olan Darth Vader ile karşı karşıya gelir. Film, mitolojik unsurları uzay operası türüyle birleştirmiş ve sinema tarihinde devrim yarattımıştır.",
+                    "year": 1977,
+                    "duration": 121,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
+            "featured": true,
+                    "created_at": "2023-10-29 12:00:00",
+                    "category": {
+                        "id": 1,
+                        "name": "Bilim Kurgu"
+                    }
+                },
+                {
+                    "id": 30,
+                    "title": "Truman Show",
+                    "description": "Peter Weir'in yönettiği bu düşündürücü film, farkında olmadan doğduğu andan itibaren 24 saat canlı yayınlanan bir reality show'un yıldızı olan Truman Burbank'in (Jim Carrey) hikayesini anlatır. Truman, özel olarak inşa edilmiş dev bir stüdyoda yaşar ve çevresindeki herkes - karısı, en iyi arkadaşı, iş arkadaşları - aslında birer aktördür. Show'un yaratıcısı Christof (Ed Harris), Truman'ın yapay dünyasını titizlikle kontrol eder. Ancak, Truman zamanla hayatındaki tuhaflıkları fark etmeye başlar ve gerçeği keşfetme yolculuğuna çıkar. Film, reality televizyon, gözetim toplumu, özgür irade, yapay gerçeklik ve medyanın gücü üzerine derin bir eleştiri sunarken, aynı zamanda bir insanın gerçeği arama ve özgürlüğe kavuşma mücadelesini etkileyici bir şekilde anlatır.",
+                    "year": 1998,
+                    "duration": 103,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/vuza0WqY8Fz4GM6manBQoKi3Kku.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-30 12:00:00",
+                    "category": {
+                        "id": 4,
+                        "name": "Dram"
+                    }
+                },
+                {
+                    "id": 31,
+                    "title": "Akıl Oyunları",
+                    "description": "Ron Howard'ın yönettiği ve gerçek bir hikayeden uyarlanan bu film, Nobel ödüllü matematikçi John Nash'in (Russell Crowe) hayatını anlatır. Princeton Üniversitesi'nde parlak bir matematik öğrencisi olan Nash, oyun teorisi üzerine çığır açan çalışmasıyla akademik başarıya ulaşır. Ancak, şizofreni teşhisi konulmasıyla hayatı dramatik bir şekilde değişir. Film, Nash'in hastalığıyla mücadelesini, eşi Alicia'nın (Jennifer Connelly) desteğiyle ayakta kalma çabasını ve matematiksel dehası ile zihinsel hastalığı arasındaki karmaşık ilişkiyi ele alır. Nash'in gerçeklik ile hayal arasındaki çizgide yaşadığı zorluklar, izleyiciyi de bu belirsizliğin içine çeker.",
+                    "year": 2001,
+                    "duration": 135,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/zwzWCmH72OSC9NA0ipoqw5Zjya8.jpg",
+                    "featured": false,
+                    "created_at": "2023-10-31 12:00:00",
+                    "category": {
+                        "id": 4,
+                        "name": "Dram"
+                    }
+                },
+                {
+                    "id": 32,
+                    "title": "Piyanist",
+                    "description": "Roman Polanski'nin yönettiği ve gerçek bir hayat hikayesinden uyarlanan bu film, Yahudi piyanist Władysław Szpilman'ın (Adrien Brody) II. Dünya Savaşı sırasında Varşova'da hayatta kalma mücadelesini anlatır. Başarılı bir klasik müzisyen olan Szpilman, Nazi işgali altındaki Polonya'da giderek artan baskı ve zulümle karşı karşıya kalır. Ailesi toplama kamplarına gönderilirken, kendisi mucizevi bir şekilde kurtulur ve şehrin harabelerinde saklanarak hayatta kalmaya çalışır. Film, savaşın dehşetini ve insanlığın en karanlık dönemlerinden birini, bir sanatçının gözünden anlatırken, hayatta kalma içgüdüsü, sanatın gücü ve insan ruhunun dayanıklılığı temalarını işler.",
+                    "year": 2002,
+                    "duration": 150,
+                    "poster_url": "https://image.tmdb.org/t/p/w500/2hFvxCCWrTmCYwfy7yum0GKRi3Y.jpg",
+                    "featured": false,
+                    "created_at": "2023-11-01 12:00:00",
+                    "category": {
+                        "id": 4,
+                        "name": "Dram"
+                    }
+                }
+
+
+
+
+    ],
+    "password_resets": [],
+    "reviews": [
+        
+    ]
+} 

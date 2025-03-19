@@ -1,0 +1,75 @@
+{
+    "users": {
+        "1": {
+            "total_watched": 5,
+            "total_hours": 10.5,
+            "genres": {
+                "Aksiyon": 2,
+                "Komedi": 1,
+                "Bilim Kurgu": 2
+            },
+            "favorite_movies": [
+                {
+                    "id": 1,
+                    "title": "Y\u0131ld\u0131zlararas\u0131",
+                    "year": 2014,
+                    "director": "Christopher Nolan",
+                    "watched_date": "2023-05-15"
+                }
+            ],
+            "watch_history": [
+                {
+                    "id": 1,
+                    "date": "2023-05-15",
+                    "movie_id": 1,
+                    "movie_title": "Y\u0131ld\u0131zlararas\u0131",
+                    "duration": 169
+                }
+            ],
+            "activity_calendar": {
+                "2023-05-15": 1
+            },
+            "favorites": [
+                {
+                    "id": 1,
+                    "title": "Y\u0131ld\u0131zlararas\u0131",
+                    "year": 2014,
+                    "director": "Christopher Nolan",
+                    "poster_url": "images\/movies\/interstellar.jpg",
+                    "category": "Bilim Kurgu",
+                    "added_at": "2023-05-15 14:30:00"
+                }
+            ],
+            "last_login": "2023-05-15T14:30:00"
+        },
+        "5": {
+            "total_watched": 2,
+            "total_hours": 5,
+            "genres": {
+                "Aksiyon": 1,
+                "Bilim Kurgu": 1
+            },
+            "favorite_movies": [],
+            "watch_history": [
+                {
+                    "id": 1,
+                    "date": "2025-03-18 21:10:39",
+                    "movie_id": 2,
+                    "movie_title": "The Dark Knight",
+                    "duration": 152
+                },
+                {
+                    "id": 2,
+                    "date": "2025-03-18 21:21:23",
+                    "movie_id": 1,
+                    "movie_title": "Inception",
+                    "duration": 148
+                }
+            ],
+            "activity_calendar": {
+                "2025-03-18": 2
+            },
+            "favorites": []
+        }
+    }
+}

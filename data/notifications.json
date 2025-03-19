@@ -1,0 +1,262 @@
+{
+    "users": {
+        "1": {
+            "notifications": [
+                {
+                    "id": 1,
+                    "title": "Yeni film eklendi!",
+                    "message": "Watchlist'inizdeki \"Matrix\" filmi platformumuza eklendi.",
+                    "date": "2024-03-22",
+                    "read": false,
+                    "type": "new_movie"
+                },
+                {
+                    "id": 2,
+                    "title": "\u0130zleme hat\u0131rlat\u0131c\u0131s\u0131",
+                    "message": "\"Interstellar\" filmini izlemeye ba\u015flad\u0131n\u0131z ama bitirmediniz.",
+                    "date": "2024-03-21",
+                    "read": true,
+                    "type": "reminder"
+                },
+                {
+                    "id": 3,
+                    "title": "Ho\u015fgeldiniz!",
+                    "message": "GedikFlix ailesine ho\u015fgeldiniz. \u0130yi seyirler dileriz.",
+                    "date": "2024-03-18",
+                    "read": true,
+                    "type": "welcome"
+                },
+                {
+                    "id": 4,
+                    "title": "Film Gurusu rozetini kazand\u0131n\u0131z!",
+                    "message": "50'den fazla film izlediniz ve Film Gurusu rozetini kazand\u0131n\u0131z. Tebrikler!",
+                    "date": "2024-03-14",
+                    "read": true,
+                    "type": "badge"
+                },
+                {
+                    "id": 5,
+                    "title": "Yeni kategori: Belgesel",
+                    "message": "Belgesel kategorisinde yeni filmler eklendi, g\u00f6z atabilirsiniz.",
+                    "date": "2024-03-10",
+                    "read": true,
+                    "type": "new_category"
+                }
+            ],
+            "settings": {
+                "email_notifications": true,
+                "browser_notifications": true,
+                "sms_notifications": false
+            }
+        },
+        "5": {
+            "notifications": [
+                {
+                    "id": 23,
+                    "title": "Film favorilerden \u00e7\u0131kar\u0131ld\u0131",
+                    "message": "\"Baba\" filmi favorilerinizden \u00e7\u0131kar\u0131ld\u0131.",
+                    "date": "2025-03-19 06:23:40",
+                    "read": false,
+                    "type": "favorite",
+                    "icon": "fa-heart",
+                    "color": "#e74c3c"
+                },
+                {
+                    "id": 22,
+                    "title": "Film favorilerden \u00e7\u0131kar\u0131ld\u0131",
+                    "message": "\"Baba 2\" filmi favorilerinizden \u00e7\u0131kar\u0131ld\u0131.",
+                    "date": "2025-03-19 06:20:11",
+                    "read": false,
+                    "type": "favorite",
+                    "icon": "fa-heart",
+                    "color": "#e74c3c"
+                },
+                {
+                    "id": 21,
+                    "title": "Film favorilere eklendi",
+                    "message": "\"Baba 2\" filmi favorilerinize eklendi.",
+                    "date": "2025-03-19 06:20:11",
+                    "read": false,
+                    "type": "favorite",
+                    "icon": "fa-heart",
+                    "color": "#e74c3c"
+                },
+                {
+                    "id": 20,
+                    "title": "\u0130lk Yorum rozetini kazand\u0131n\u0131z!",
+                    "message": "\u0130lk yorumunuzu yapt\u0131n\u0131z. Tebrikler!",
+                    "date": "2025-03-18 21:21:31",
+                    "read": true,
+                    "type": "badge",
+                    "icon": "fa-award",
+                    "color": "#f1c40f"
+                },
+                {
+                    "id": 19,
+                    "title": "Film \u0130zlendi",
+                    "message": "\"Inception\" filmini izlediniz.",
+                    "date": "2025-03-18 21:21:23",
+                    "read": true,
+                    "type": "watch",
+                    "icon": "fa-film",
+                    "color": "#2ecc71"
+                },
+                {
+                    "id": 18,
+                    "title": "Film favorilerden \u00e7\u0131kar\u0131ld\u0131",
+                    "message": "\"Inception\" filmi favorilerinizden \u00e7\u0131kar\u0131ld\u0131.",
+                    "date": "2025-03-18 21:21:21",
+                    "read": true,
+                    "type": "favorite",
+                    "icon": "fa-heart",
+                    "color": "#e74c3c"
+                },
+                {
+                    "id": 17,
+                    "title": "Film favorilere eklendi",
+                    "message": "\"Inception\" filmi favorilerinize eklendi.",
+                    "date": "2025-03-18 21:21:18",
+                    "read": true,
+                    "type": "favorite",
+                    "icon": "fa-heart",
+                    "color": "#e74c3c"
+                },
+                {
+                    "id": 16,
+                    "title": "\u0130lk Favori rozetini kazand\u0131n\u0131z!",
+                    "message": "\u0130lk filmi favorilere ekleyerek '\u0130lk Favori' rozetini kazand\u0131n\u0131z. Tebrikler!",
+                    "date": "2025-03-18 21:15:16",
+                    "read": true,
+                    "type": "badge",
+                    "icon": "fa-award",
+                    "color": "#f1c40f"
+                },
+                {
+                    "id": 15,
+                    "title": "Film favorilere eklendi",
+                    "message": "\"The Dark Knight\" filmi favorilerinize eklendi.",
+                    "date": "2025-03-18 21:15:16",
+                    "read": true,
+                    "type": "favorite",
+                    "icon": "fa-heart",
+                    "color": "#e74c3c"
+                },
+                {
+                    "id": 14,
+                    "title": "Yeni Ba\u015flayan rozetini kazand\u0131n\u0131z!",
+                    "message": "\u0130lk filminizi izleyerek 'Yeni Ba\u015flayan' rozetini kazand\u0131n\u0131z. Film yolculu\u011funuza ho\u015f geldiniz!",
+                    "date": "2025-03-18 21:10:39",
+                    "read": true,
+                    "type": "badge",
+                    "icon": "fa-award",
+                    "color": "#f1c40f"
+                },
+                {
+                    "id": 13,
+                    "title": "Yeni Ba\u015flayan rozetini kazand\u0131n\u0131z!",
+                    "message": "\u0130lk filmi izlediniz. Tebrikler!",
+                    "date": "2025-03-18 21:10:39",
+                    "read": true,
+                    "type": "badge",
+                    "icon": "fa-award",
+                    "color": "#f1c40f"
+                },
+                {
+                    "id": 12,
+                    "title": "Yeni Ba\u015flayan rozetini kazand\u0131n\u0131z!",
+                    "message": "\u0130lk filmi izlediniz. Tebrikler!",
+                    "date": "2025-03-18 21:10:39",
+                    "read": true,
+                    "type": "badge",
+                    "icon": "fa-award",
+                    "color": "#f1c40f"
+                },
+                {
+                    "id": 11,
+                    "title": "Film \u0130zlendi",
+                    "message": "\"The Dark Knight\" filmini izlediniz.",
+                    "date": "2025-03-18 21:10:39",
+                    "read": true,
+                    "type": "watch",
+                    "icon": "fa-film",
+                    "color": "#2ecc71"
+                },
+                {
+                    "id": 10,
+                    "title": "\u0130lk Yorum rozetini kazand\u0131n\u0131z!",
+                    "message": "\u0130lk yorumunuzu yapt\u0131n\u0131z. Tebrikler!",
+                    "date": "2025-03-18 21:06:43",
+                    "read": true,
+                    "type": "badge",
+                    "icon": "fa-award",
+                    "color": "#f1c40f"
+                },
+                {
+                    "id": 9,
+                    "title": "Film favorilerden \u00e7\u0131kar\u0131ld\u0131",
+                    "message": "\"The Dark Knight\" filmi favorilerinizden \u00e7\u0131kar\u0131ld\u0131.",
+                    "date": "2025-03-18 21:05:55",
+                    "read": true,
+                    "type": "favorite",
+                    "icon": "fa-heart",
+                    "color": "#e74c3c"
+                },
+                {
+                    "id": 8,
+                    "title": "\u0130lk Favori rozetini kazand\u0131n\u0131z!",
+                    "message": "\u0130lk filmi favorilere ekleyerek '\u0130lk Favori' rozetini kazand\u0131n\u0131z. Tebrikler!",
+                    "date": "2025-03-18 21:05:52",
+                    "read": true,
+                    "type": "badge",
+                    "icon": "fa-award",
+                    "color": "#f1c40f"
+                },
+                {
+                    "id": 7,
+                    "title": "\u0130lk Favori rozetini kazand\u0131n\u0131z!",
+                    "message": "\u0130lk filminizi favorilere eklediniz. Tebrikler!",
+                    "date": "2025-03-18 21:05:52",
+                    "read": true,
+                    "type": "badge",
+                    "icon": "fa-award",
+                    "color": "#f1c40f"
+                },
+                {
+                    "id": 6,
+                    "title": "\u0130lk Favori rozetini kazand\u0131n\u0131z!",
+                    "message": "\u0130lk filminizi favorilere eklediniz. Tebrikler!",
+                    "date": "2025-03-18 21:05:52",
+                    "read": true,
+                    "type": "badge",
+                    "icon": "fa-award",
+                    "color": "#f1c40f"
+                },
+                {
+                    "id": 5,
+                    "title": "Film favorilere eklendi",
+                    "message": "\"The Dark Knight\" filmi favorilerinize eklendi.",
+                    "date": "2025-03-18 21:05:52",
+                    "read": true,
+                    "type": "favorite",
+                    "icon": "fa-heart",
+                    "color": "#e74c3c"
+                },
+                {
+                    "id": 4,
+                    "title": "Film favorilerden \u00e7\u0131kar\u0131ld\u0131",
+                    "message": "\"The Dark Knight\" filmi favorilerinizden \u00e7\u0131kar\u0131ld\u0131.",
+                    "date": "2025-03-18 21:05:49",
+                    "read": true,
+                    "type": "favorite",
+                    "icon": "fa-heart",
+                    "color": "#e74c3c"
+                }
+            ],
+            "settings": {
+                "email_notifications": true,
+                "browser_notifications": true,
+                "sms_notifications": false
+            }
+        }
+    }
+}

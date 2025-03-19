@@ -1,0 +1,340 @@
+/* Yorum Sistemi Stilleri */
+
+.comments-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(20, 20, 20, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.comments-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+    border-bottom: 2px solid #7FFF00;
+    padding-bottom: 10px;
+}
+
+.comment-form {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    background-color: rgba(30, 30, 30, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    border: 2px solid #7FFF00;
+    flex-shrink: 0;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comment-form form {
+    flex: 1;
+}
+
+.comment-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 12px 15px;
+    background-color: rgba(40, 40, 40, 0.8);
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    margin-bottom: 15px;
+    resize: none;
+    font-family: inherit;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.comment-form textarea:focus {
+    border-color: #7FFF00;
+    box-shadow: 0 0 5px rgba(127, 255, 0, 0.4);
+    outline: none;
+}
+
+.rating-container {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.rating-container .stars {
+    display: flex;
+    margin-left: 10px;
+}
+
+.rating-container .star {
+    color: #555;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.rating-container .star.active {
+    color: #7FFF00;
+}
+
+.rating-container label {
+    color: #ccc;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.submit-comment {
+    background-color: #7FFF00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.submit-comment:hover {
+    background-color: #72E600;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Yorumlar Listesi */
+.comments-list {
+    margin-top: 30px;
+}
+
+.comment-item {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgba(40, 40, 40, 0.7);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.comment-item:hover {
+    background-color: rgba(50, 50, 50, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #7FFF00;
+    font-size: 16px;
+}
+
+.comment-date {
+    color: #999;
+    font-size: 12px;
+}
+
+.comment-text {
+    color: #eee;
+    line-height: 1.5;
+}
+
+.user-rating {
+    margin-top: 10px;
+    color: #7FFF00;
+}
+
+.user-rating .fas {
+    margin-right: 3px;
+}
+
+/* Yorum Yok Durumu */
+.no-comments {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 6px;
+    font-style: italic;
+}
+
+/* Yorum düzenleme ve silme butonları için stil */
+.comment-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.edit-review-btn, .delete-review-btn {
+    background-color: transparent;
+    border: none;
+    color: #999;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.edit-review-btn:hover {
+    color: #7FFF00;
+    background-color: rgba(127, 255, 0, 0.1);
+}
+
+.delete-review-btn:hover {
+    color: #ff4d4d;
+    background-color: rgba(255, 77, 77, 0.1);
+}
+
+.user-badge {
+    font-size: 12px;
+    color: #7FFF00;
+    margin-left: 5px;
+    padding: 2px 5px;
+    background-color: rgba(127, 255, 0, 0.1);
+    border-radius: 3px;
+}
+
+/* Düzenleme Popup'ı */
+.edit-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-popup-content {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: popupOpen 0.3s ease-out;
+}
+
+.edit-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.edit-popup-header h3 {
+    color: #fff;
+    font-size: 20px;
+    margin: 0;
+}
+
+.edit-popup-close {
+    cursor: pointer;
+    color: #999;
+    font-size: 24px;
+    transition: color 0.2s;
+}
+
+.edit-popup-close:hover {
+    color: #fff;
+}
+
+.edit-rating-container {
+    margin-bottom: 15px;
+}
+
+.edit-rating-container .stars {
+    display: flex;
+    margin-top: 10px;
+}
+
+.edit-popup textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px 15px;
+    background-color: rgba(40, 40, 40, 0.8);
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    margin-bottom: 20px;
+    resize: none;
+    font-family: inherit;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.edit-popup textarea:focus {
+    border-color: #7FFF00;
+    box-shadow: 0 0 5px rgba(127, 255, 0, 0.4);
+    outline: none;
+}
+
+.edit-popup-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cancel-edit-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.save-edit-btn {
+    background-color: #7FFF00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.save-edit-btn:hover {
+    background-color: #72E600;
+}
+
+@keyframes popupOpen {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+} 

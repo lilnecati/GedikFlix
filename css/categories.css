@@ -1,0 +1,80 @@
+.categories-container {
+    padding: 80px 5% 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categories-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.category-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    background-color: #222;
+}
+
+.category-card h2 {
+    color: #7FFF00;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.category-card p {
+    color: #999;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.category-card .movie-count {
+    display: inline-block;
+    background-color: #7FFF00;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.category-card a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.category-card a:hover {
+    color: #7FFF00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .categories-container h2 {
+        font-size: 1.8rem;
+    }
+} 

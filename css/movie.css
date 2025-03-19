@@ -1,0 +1,935 @@
+/* Film Sayfası Ana CSS Dosyası */
+
+/* Taban düzen ve yapı stilleri */
+@import url('base/movie-layout.css');
+
+/* Bileşen Stilleri */
+@import url('components/buttons.css');
+@import url('components/notifications.css');
+@import url('components/comments.css');
+
+/* Genel değişkenler ve ayarlar */
+:root {
+  --brand-color: #901a58;
+  --brand-hover: #7a1749;
+  --primary-color: #8A2BE2;
+  --primary-light: #9B30FF;
+  --primary-dark: #7126B5;
+  --accent-color: #FF5252;
+  --accent-light: #FF6B6B;
+  --accent-dark: #E53935;
+}
+
+/* Movie.css dosyasına özgü ek özelleştirmeler */
+/* Burada mevcut dosyalara herhangi bir ek stil eklenebilir */
+
+/* Movie Detail Page Styles */
+.movie-detail {
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.movie-header {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.movie-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.1) 70%, rgba(0,0,0,0.1) 100%);
+    z-index: 0;
+}
+
+.movie-info {
+    max-width: 800px;
+    z-index: 1;
+}
+
+.movie-info h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.movie-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.movie-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.movie-meta i {
+    color: var(--brand-color);
+}
+
+.movie-rating {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stars {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.stars i {
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+.stars i.filled {
+    color: #ffd700;
+}
+
+.rating-count {
+    color: #999;
+    font-size: 1rem;
+}
+
+.movie-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+}
+
+.movie-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.watch-button, .favorite-button {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.watch-button {
+    background-color: var(--brand-color);
+    color: white;
+    border: none;
+}
+
+.watch-button:hover {
+    background-color: var(--brand-hover);
+}
+
+.favorite-button {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 1px solid #8A2BE2;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.favorite-button:hover {
+    background-color: rgba(138, 43, 226, 0.2);
+}
+
+.favorite-button.active {
+    background-color: #8A2BE2;
+    color: white;
+}
+
+.favorite-button i {
+    font-size: 16px;
+}
+
+.favorite-button.active i {
+    color: #FFD700;
+}
+
+.movie-content {
+    padding: 3rem 5%;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.video-player {
+    width: 100%;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.video-player video {
+    width: 100%;
+    display: block;
+}
+
+.movie-details {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.movie-details h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.detail-item i {
+    color: var(--brand-color);
+    font-size: 1.2rem;
+}
+
+.detail-item span {
+    color: #999;
+}
+
+.movie-reviews {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.movie-reviews h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.review-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.review-user {
+    font-weight: bold;
+    color: var(--brand-color);
+}
+
+.review-rating {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.review-rating i {
+    color: #ffd700;
+    font-size: 0.9rem;
+}
+
+.review-comment {
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+/* Güzelleştirilmiş Benzer Filmler Bölümü */
+.similar-movies-section {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.similar-movies-section h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.similar-movies-section h2:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--brand-color);
+    margin: 10px auto 0;
+}
+
+.similar-movies {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--brand-color) rgba(255, 255, 255, 0.1);
+    -webkit-overflow-scrolling: touch;
+}
+
+.similar-movies::-webkit-scrollbar {
+    height: 8px;
+}
+
+.similar-movies::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.similar-movies::-webkit-scrollbar-thumb {
+    background-color: var(--brand-color);
+    border-radius: 4px;
+}
+
+.movie-card {
+    min-width: 180px;
+    max-width: 220px;
+    flex: 0 0 auto;
+    background-color: rgba(20, 20, 20, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5rem;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(var(--brand-color), 0.3);
+}
+
+.movie-poster {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-poster img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.movie-card:hover .movie-poster img {
+    transform: scale(1.05);
+}
+
+.movie-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-overlay {
+    opacity: 1;
+}
+
+.movie-card .watch-button {
+    background-color: var(--brand-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.movie-card .watch-button:hover {
+    background-color: var(--brand-hover);
+}
+
+.movie-card .movie-info {
+    padding: 1rem;
+}
+
+.movie-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-card p {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.no-similar {
+    text-align: center;
+    color: #999;
+    padding: 20px;
+    width: 100%;
+    font-style: italic;
+}
+
+/* İçerik Grid Düzeni Güncelleme */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* Yanıt Verilen Tasarım */
+@media (max-width: 768px) {
+    .similar-movies {
+        padding-bottom: 1.5rem;
+    }
+    
+    .movie-card {
+        min-width: 160px;
+    }
+    
+    .movie-card h3 {
+    font-size: 0.9rem;
+    }
+    
+    .movie-card p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .movie-header {
+        height: 100vh;
+    }
+    
+    .movie-info h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-header {
+        height: 100vh;
+    }
+    
+    .movie-info h1 {
+        font-size: 2.2rem;
+    }
+    
+    .movie-meta {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .movie-actions {
+        flex-direction: column;
+    }
+    
+    .watch-button, .favorite-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-header {
+        height: 100vh;
+    }
+    
+    .movie-info h1 {
+        font-size: 1.8rem;
+    }
+    
+    .movie-description {
+        font-size: 1rem;
+    }
+    
+    .movie-meta span {
+        font-size: 0.9rem;
+    }
+}
+
+/* Popup Stilleri */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #2a2a2a;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: popupOpen 0.3s ease-out;
+}
+
+@keyframes popupOpen {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.2s;
+}
+
+.popup-close:hover {
+  color: #fff;
+}
+
+.popup-icon {
+  font-size: 42px;
+  color: var(--brand-color);
+  margin-bottom: 15px;
+}
+
+.popup-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.popup-message {
+  color: #ccc;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.popup-button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  text-decoration: none;
+}
+
+.popup-button.primary {
+  background-color: var(--brand-color);
+  color: #fff;
+}
+
+.popup-button.primary:hover {
+  background-color: var(--brand-hover);
+}
+
+.popup-button.secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Yorum Sistemi Geliştirmeleri */
+.comments-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(20, 20, 20, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.comments-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+    border-bottom: 2px solid #7FFF00;
+    padding-bottom: 10px;
+}
+
+.comment-form {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    background-color: rgba(30, 30, 30, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    border: 2px solid #7FFF00;
+    flex-shrink: 0;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comment-form form {
+    flex: 1;
+}
+
+.comment-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 12px 15px;
+    background-color: rgba(40, 40, 40, 0.8);
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    margin-bottom: 15px;
+    resize: none;
+    font-family: inherit;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.comment-form textarea:focus {
+    border-color: #7FFF00;
+    box-shadow: 0 0 5px rgba(127, 255, 0, 0.4);
+    outline: none;
+}
+
+.rating-container {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.rating-container .stars {
+    display: flex;
+    margin-left: 10px;
+}
+
+.rating-container .star {
+    color: #555;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.rating-container .star.active {
+    color: #7FFF00;
+}
+
+.rating-container label {
+    color: #ccc;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.submit-comment {
+    background-color: #7FFF00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.submit-comment:hover {
+    background-color: #72E600;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Yorumlar Listesi */
+.comments-list {
+    margin-top: 30px;
+}
+
+.comment-item {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgba(40, 40, 40, 0.7);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.comment-item:hover {
+    background-color: rgba(50, 50, 50, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #7FFF00;
+    font-size: 16px;
+}
+
+.comment-date {
+    color: #999;
+    font-size: 12px;
+}
+
+.comment-text {
+    color: #eee;
+    line-height: 1.5;
+}
+
+.user-rating {
+    margin-top: 10px;
+    color: #7FFF00;
+}
+
+.user-rating .fas {
+    margin-right: 3px;
+}
+
+/* Yorum Yok Durumu */
+.no-comments {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 6px;
+    font-style: italic;
+}
+
+/* Yorum düzenleme ve silme butonları için stil */
+.comment-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.edit-review-btn, .delete-review-btn {
+    background-color: transparent;
+    border: none;
+    color: #999;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.edit-review-btn:hover {
+    color: #7FFF00;
+    background-color: rgba(127, 255, 0, 0.1);
+}
+
+.delete-review-btn:hover {
+    color: #ff4d4d;
+    background-color: rgba(255, 77, 77, 0.1);
+}
+
+.user-badge {
+    font-size: 12px;
+    color: #7FFF00;
+    margin-left: 5px;
+    padding: 2px 5px;
+    background-color: rgba(127, 255, 0, 0.1);
+    border-radius: 3px;
+}
+
+/* Düzenleme Popup'ı */
+.edit-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-popup-content {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: popupOpen 0.3s ease-out;
+}
+
+.edit-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.edit-popup-header h3 {
+    color: #fff;
+    font-size: 20px;
+    margin: 0;
+}
+
+.edit-popup-close {
+    cursor: pointer;
+    color: #999;
+    font-size: 24px;
+    transition: color 0.2s;
+}
+
+.edit-popup-close:hover {
+    color: #fff;
+}
+
+.edit-rating-container {
+    margin-bottom: 15px;
+}
+
+.edit-rating-container .stars {
+    display: flex;
+    margin-top: 10px;
+}
+
+.edit-popup textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px 15px;
+    background-color: rgba(40, 40, 40, 0.8);
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    margin-bottom: 20px;
+    resize: none;
+    font-family: inherit;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.edit-popup textarea:focus {
+    border-color: #7FFF00;
+    box-shadow: 0 0 5px rgba(127, 255, 0, 0.4);
+    outline: none;
+}
+
+.edit-popup-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cancel-edit-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.save-edit-btn {
+    background-color: #7FFF00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.save-edit-btn:hover {
+    background-color: #72E600;
+} 
